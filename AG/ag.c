@@ -15,6 +15,7 @@ int main()
   int s_star[] = {0,0,0,0,0};               //melhor solucao
   int p[] = {52, 23, 35, 15, 7};            //peso de cada objeto
   int b[] = {100, 60, 70, 15, 15};          //benf. de cada objeto
+  int populacao[n]                          //população
   int fo;                                   //funcao objetivo corrent
   int excesso;                              //excesso de peso na mochila
   int penalidade;                           //penalidade por exceder
@@ -38,6 +39,10 @@ int main()
   printf("beneficio: %d\t peso na mochila: %d\t excesso: %d \n\n", calcula_fo(s, n, b, 50, p, n, c), calcula_peso_objetos(s, n, p), calcula_excesso(calcula_peso_objetos(s, n, p), c));
 
   return 0;
+}
+
+void popular(int p[]) {
+  
 }
 
 void constroi_solucao_aleatoria(int s[], int itens) {
@@ -86,6 +91,17 @@ int calcula_fo(int s[], int itens, int b[], int penalidade, int p[], int n, int 
 
   return beneficio - penalidade * excesso;
 }
+
+
+void calcula_melhor_populacao(int s[], int itens, int b[], int penalidade, int p[], int n, int c, int populacao[]) {
+  for(i=0; i<tam_pop; i++)
+  {
+    calcula_fo()
+  }
+}
+
+
+
 
 void subida(int n, int s[], int b[], int p[], int c, int penalidade, int *peso_objetos, int *fo) {
 

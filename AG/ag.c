@@ -1,5 +1,5 @@
 /*
-* @file:              Mochila.c
+* @arquivo:           ag.c
 * @autores:           Daniel Leal
 * @instituição:       Centro Universitário do Estado do Pará (CESUPA)
 * @descrição:         Avaliação de Desempenho de um Algortimo Genético para
@@ -18,6 +18,7 @@
 #define TAM_POP 7 // Tamanho da população (Quantidade de Individuos)
 #define TAM_IND 5 // Quantidade de Objetos
 #define GERACOES 10 // Numero de Iteracoes
+#define PENALIDADE 50 // penalidade por exceder
 
 int i, j; //contador usado nos loops
 
@@ -30,8 +31,6 @@ int main() {
   int capacidade;                           //capacidade da mochila
   int pesoIndividuo[TAM_POP];               //soma dos pesos de cada individuo
                                             //1ª col = indivuo - 2ª col = peso
-  // int penalidade = 50;                   //penalidade por exceder
-
 
   /* Fluxo do Programa */
   gerarPesos(pesos, TAM_IND);
@@ -40,6 +39,7 @@ int main() {
   printf("\n");
   popular(pop, TAM_POP, TAM_IND);
   calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
+  calcularBenefIndividuo((pop, benefIndividuo, TAM_POP, TAM_IND, beneficios);
 
   return 0;
 }
@@ -196,13 +196,27 @@ void imprimirPesoIndividuo(int pesoIndividuo[], int tamPop) {
 }
 
 /*
-* Verifica se o número é par.
-* @param n - numero a ser testado
-* @return 1 (TRUE) caso seja par e 0 (FALSE) caso seja impar.
+* Calcula a soma dos pesos de cada objeto presente na mochila.
+* Isto e, todos os elementos com valor 1 de cada individuo.
+* @param populacao - populacao de individuos
+* @param pesoObjetos - vetor contendo o peso de cada individuo
+* @param tamPop - tamanho da populacao
+* @param tamIndiv- tamanho do individuo
+* @param p - vetor de pesos
 */
-int ehPar(int n) {
-  return n % 2 == 0 ? 1 : 0;
+void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int tamPop, int tamIndiv, int p[]) {
+  int aux = 0, k = 0;
+  for(i = 0; i < tamPop; i++) {
+    for(j = 0; j < tamIndiv; j++) {
+      if (populacao[i][j])
+        aux += p[j];
+    }
+    pesoIndividuo[i] = aux;
+    aux = 0;
+  }
+  imprimirPesoIndividuo(pesoIndividuo, tamPop);
 }
+
 
 
 // int calculaFo(int s[], int itens, int b[], int penalidade, int p[], int n, int c) {
@@ -225,6 +239,17 @@ int ehPar(int n) {
 // }
 //
 //
-// int calcula_excesso(int peso_objetos, int capacidade) {
-//   return MAX(0, peso_objetos - capacidade);
-// }
+
+int calcularExcesso(int pesoObjetos, int capacidade) {
+  return MAX(0, peso_objetos - capacidade);
+}
+
+
+/*
+* Verifica se o número é par.
+* @param n - numero a ser testado
+* @return 1 (TRUE) caso seja par e 0 (FALSE) caso seja impar.
+*/
+int ehPar(int n) {
+  return n % 2 == 0 ? 1 : 0;
+}

@@ -2,9 +2,9 @@
 * @arquivo:           ag.c
 * @autores:           Daniel Leal
 * @instituição:       Centro Universitário do Estado do Pará (CESUPA)
-* @descrição:         Avaliação de Desempenho de um Algortimo Genético para
+* @descrição:         Análise de Desempenho de um Algortimo Genético para
 *                     a solução do problema da mochila booleana.
-* @uso:               gcc Mochila.c -o <output_file> -O -w //Compila
+* @uso:               gcc ag.c -o <output_file> -O -w //Compilar
 *                     ./<output_file> //Executa
 */
 
@@ -12,8 +12,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <limits.h> //INT_MAX
-
-#define MAX(x,y) ((x)<(y) ? (y) : (x))
 
 #define TAM_POP 7 // Tamanho da população (Quantidade de Individuos)
 #define TAM_IND 5 // Quantidade de Objetos
@@ -30,7 +28,9 @@ int main() {
   int beneficios[TAM_IND];                  //benf. de cada objeto
   int capacidade;                           //capacidade da mochila
   int pesoIndividuo[TAM_POP];               //soma dos pesos de cada individuo
-                                            //1ª col = indivuo - 2ª col = peso
+  int excessoIndividuo[TAM_POP];            //excesso de cada individuo
+  int benefIndividuo[TAM_POP];              //beneficio de cada individuo
+  int penalidadeIndividuo[TAM_POP];         //penalidade de cada individuo por exceder.
 
   /* Fluxo do Programa */
   gerarPesos(pesos, TAM_IND);
@@ -39,7 +39,11 @@ int main() {
   printf("\n");
   popular(pop, TAM_POP, TAM_IND);
   calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
-  calcularBenefIndividuo((pop, benefIndividuo, TAM_POP, TAM_IND, beneficios);
+  calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade, TAM_POP);
+  calcularPenalidade(pop, PENALIDADE, TAM_IND, TAM_POP, penalidadeIndividuo);
+  calcularBenefIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, beneficios, PENALIDADE, excessoIndividuo);
+  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, TAM_POP);
+
 
   return 0;
 }
@@ -174,7 +178,7 @@ int calcularPesoTotal(int p[], int qtde) {
 * @param p - vetor de pesos
 */
 void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int tamPop, int tamIndiv, int p[]) {
-  int aux = 0, k = 0;
+  int aux = 0;
   for(i = 0; i < tamPop; i++) {
     for(j = 0; j < tamIndiv; j++) {
       if (populacao[i][j])
@@ -183,66 +187,77 @@ void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int ta
     pesoIndividuo[i] = aux;
     aux = 0;
   }
-  imprimirPesoIndividuo(pesoIndividuo, tamPop);
 }
 
-void imprimirPesoIndividuo(int pesoIndividuo[], int tamPop) {
-  printf("Peso Total de Cada Individuo: \n");
+/*
+* Calcula o execesso de peso de cada individuo.
+* 0 caso não haja excesso.
+* @pram pesoIndividuo - vetor com o peso dos individuos
+* @param excessoIndividuo - vetor que sera preenchido com o excesso de peso dos individuos
+* @param capacidade - capacidade de peso da mochila.
+*/
+void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int capacidade, int tamPop) {
   for(i = 0; i < tamPop; i++) {
-    printf("Individuo%d: ", i);
-    printf(" %d ", pesoIndividuo[i]);
-    printf("\n");
+    if (pesoIndividuo[i] - capacidade <  0)
+      excessoIndividuo[i] = 0;
+    else
+      excessoIndividuo[i] = pesoIndividuo[i] - capacidade;
   }
 }
 
 /*
 * Calcula a soma dos pesos de cada objeto presente na mochila.
-* Isto e, todos os elementos com valor 1 de cada individuo.
+* Isto é, todos os elementos com valor 1 de cada individuo.
 * @param populacao - populacao de individuos
 * @param pesoObjetos - vetor contendo o peso de cada individuo
 * @param tamPop - tamanho da populacao
 * @param tamIndiv- tamanho do individuo
 * @param p - vetor de pesos
 */
-void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int tamPop, int tamIndiv, int p[]) {
-  int aux = 0, k = 0;
+void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int b[], int penalidadeIndividuo[j], int excessoIndividuo[]) {
+
+  int aux = 0;
   for(i = 0; i < tamPop; i++) {
     for(j = 0; j < tamIndiv; j++) {
       if (populacao[i][j])
-        aux += p[j];
+        aux += b[j] - penalidadeIndividuo[j] * excessoIndividuo[j];
     }
-    pesoIndividuo[i] = aux;
+    benefIndividuo[i] = aux;
     aux = 0;
   }
-  imprimirPesoIndividuo(pesoIndividuo, tamPop);
+}
+
+/*
+* Imprime o peso e o beneficio de cada individuo
+* @param pesoIndividuo - vetor com o peso de cada individuo
+* @param benefIndividuo - vetor com o beneficio de cada individuo
+* @param tamPop - Quantidade de objetos (Individuos)
+*/
+void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int tamPop) {
+  printf("Peso Total de Cada Individuo: \n");
+  for(i = 0; i < tamPop; i++) {
+    printf("Individuo%d: ", i);
+    printf(" %d \t", pesoIndividuo[i]);
+    printf(" %d ", benefIndividuo[i]);
+    printf("\n");
+  }
 }
 
 
+void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, int tamPop, int penalidadeIndividuo[]) {
 
-// int calculaFo(int s[], int itens, int b[], int penalidade, int p[], int n, int c) {
-//   int peso = calcula_peso_objetos(s, n, p);
-//   int excesso = calcula_excesso(peso, c);
-//   int beneficio = 0;
-//
-//   for(i=0; i<itens; i++) {
-//     if(s[i])
-//       beneficio = beneficio + b[i];
-//   }
-//   return beneficio - penalidade * excesso;
-// }
+  int aux = 0;
 
-// int calcula_penalidade(int p[], int itens) {
-//   int penalidade = 0;
-//   for(i = 0; i<itens; i++)
-//     penalidade += p[i];
-//   return penalidade;
-// }
-//
-//
-
-int calcularExcesso(int pesoObjetos, int capacidade) {
-  return MAX(0, peso_objetos - capacidade);
+  for(i = 0; i<tamPop; i++) {
+    for(j = 0 ; j < tamIndiv; j++) {
+      if (populacao[i][j])
+        aux++;
+    }
+    penalidadeIndividuo[i] = penalidade * aux;
+    aux = 0;
+  }
 }
+
 
 
 /*

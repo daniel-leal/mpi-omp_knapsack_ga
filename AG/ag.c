@@ -1,6 +1,6 @@
 /*
 * @arquivo:           ag.c
-* @autores:           Daniel Leal
+* @autores:           Daniel Leal e Rodrigo Andrade
 * @instituição:       Centro Universitário do Estado do Pará (CESUPA)
 * @descrição:         Análise de Desempenho de um Algortimo Genético para
 *                     a solução do problema da mochila booleana.
@@ -213,10 +213,12 @@ void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int c
 * Calcula a soma dos pesos de cada objeto presente na mochila.
 * Isto é, todos os elementos com valor 1 de cada individuo.
 * @param populacao - populacao de individuos
-* @param pesoObjetos - vetor contendo o peso de cada individuo
+* @param benefIndividuo - vetor contendo a soma dos beneficios de cada individuo
 * @param tamPop - tamanho da populacao
 * @param tamIndiv- tamanho do individuo
-* @param p - vetor de pesos
+* @param b - vetor contendo os beneficios de cada objeto
+* @param penalidadeIndividuo - vetor contendo a penalidade por exceder de cada individuo
+* @param excessoIndividuo - vetor contendo o valor de excesso de cada individuo
 */
 void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int b[], int penalidadeIndividuo[], int excessoIndividuo[]) {
 
@@ -234,6 +236,7 @@ void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int 
 * Imprime o peso e o beneficio de cada individuo
 * @param pesoIndividuo - vetor com o peso de cada individuo
 * @param benefIndividuo - vetor com o beneficio de cada individuo
+* @param excessoIndividuo - vetor com o excesso de cada individuo
 * @param tamPop - Quantidade de objetos (Individuos)
 */
 void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[], int tamPop) {
@@ -247,7 +250,15 @@ void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int exces
   }
 }
 
-
+/*
+* Calcula a penalidade por exceder a capacidade da mochila de cada individuo, baseado no
+* parametro de penalidade definido pelo usuário
+* @param populacao - matriz contendo todos os inviduos
+* @param penalidade - penalidade definida pelo usuario
+* @param tamIndiv - numero de objetos disponiveis
+* @param tamPop - numero de individuos
+* @param penalidadeIndividuo - vetor a ser preenchido com as penalidades
+*/
 void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, int tamPop, int penalidadeIndividuo[]) {
 
   int aux = 0;
@@ -262,7 +273,14 @@ void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, 
   }
 }
 
-
+/*
+* Verifica o individuo que tem o maior beneficio e guarda num vetor (melhorIndividuo) os itens.
+* @param populacao - Conjunto de Individuos
+* @param benefIndividuo - vetor com a soma dos beneficios de cada individuo
+* @param tamPop - tamanho da populacao
+* @param tamIndiv - quantidade de objetos
+* @param melhorIndividuo - vetor a ser preenchido com o melhor individuo
+*/
 void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int melhorIndividuo[]) {
   int indiceMaiorBenef = 0;
   int maiorBenef = benefIndividuo[0];
@@ -277,7 +295,11 @@ void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], in
     melhorIndividuo[i] = populacao[indiceMaiorBenef][i];
 }
 
-
+/*
+* Imprime o melhor individuo
+* @param melhorIndividuo - vetor contendo o melhor indiviudo
+* @param tamIndiv - quantidade de objetos
+*/
 void imprimirMelhorIndividuo(int melhorIndividuo[], int tamIndiv) {
   printf("\nMelhor Individuo: \n");
   for(i = 0; i < tamIndiv; i++)

@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <limits.h> //INT_MAX
 
 #define TAM_POP 7 // Tamanho da população (Quantidade de Individuos)
 #define TAM_IND 5 // Quantidade de Objetos
@@ -31,6 +30,7 @@ int main() {
   int excessoIndividuo[TAM_POP];            //excesso de cada individuo
   int benefIndividuo[TAM_POP];              //beneficio de cada individuo
   int penalidadeIndividuo[TAM_POP];         //penalidade de cada individuo por exceder.
+  int melhorIndividuo[TAM_IND];             //melhor individuo
 
   /* Fluxo do Programa */
   gerarPesos(pesos, TAM_IND);
@@ -41,9 +41,13 @@ int main() {
   calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
   calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade, TAM_POP);
   calcularPenalidade(pop, PENALIDADE, TAM_IND, TAM_POP, penalidadeIndividuo);
+
+  /* Medir qualidade da Solucao */
   calcularBenefIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, beneficios, penalidadeIndividuo, excessoIndividuo);
   imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo, TAM_POP);
-
+  verificarMelhorIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, melhorIndividuo);
+  imprimirMelhorIndividuo(melhorIndividuo, TAM_IND);
+  printf("\n");
 
   return 0;
 }
@@ -258,6 +262,27 @@ void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, 
   }
 }
 
+
+void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int melhorIndividuo[]) {
+  int indiceMaiorBenef = 0;
+  int maiorBenef = benefIndividuo[0];
+
+  for(i = 1; i < tamPop; i++)
+    if (maiorBenef < benefIndividuo[i]) {
+      maiorBenef = benefIndividuo[i];
+      indiceMaiorBenef = i;
+    }
+
+  for (i = 0; i < tamIndiv; i++)
+    melhorIndividuo[i] = populacao[indiceMaiorBenef][i];
+}
+
+
+void imprimirMelhorIndividuo(int melhorIndividuo[], int tamIndiv) {
+  printf("\nMelhor Individuo: \n");
+  for(i = 0; i < tamIndiv; i++)
+    printf("%d ", melhorIndividuo[i]);
+}
 
 
 /*

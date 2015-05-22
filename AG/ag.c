@@ -41,8 +41,8 @@ int main() {
   calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
   calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade, TAM_POP);
   calcularPenalidade(pop, PENALIDADE, TAM_IND, TAM_POP, penalidadeIndividuo);
-  calcularBenefIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, beneficios, PENALIDADE, excessoIndividuo);
-  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, TAM_POP);
+  calcularBenefIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, beneficios, penalidadeIndividuo, excessoIndividuo);
+  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo, TAM_POP);
 
 
   return 0;
@@ -214,14 +214,13 @@ void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int c
 * @param tamIndiv- tamanho do individuo
 * @param p - vetor de pesos
 */
-void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int b[], int penalidadeIndividuo[j], int excessoIndividuo[]) {
+void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int b[], int penalidadeIndividuo[], int excessoIndividuo[]) {
 
   int aux = 0;
   for(i = 0; i < tamPop; i++) {
-    for(j = 0; j < tamIndiv; j++) {
+    for(j = 0; j < tamIndiv; j++)
       if (populacao[i][j])
-        aux += b[j] - penalidadeIndividuo[j] * excessoIndividuo[j];
-    }
+        aux += b[j] - penalidadeIndividuo[i] * excessoIndividuo[i];
     benefIndividuo[i] = aux;
     aux = 0;
   }
@@ -233,12 +232,13 @@ void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int 
 * @param benefIndividuo - vetor com o beneficio de cada individuo
 * @param tamPop - Quantidade de objetos (Individuos)
 */
-void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int tamPop) {
-  printf("Peso Total de Cada Individuo: \n");
+void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[], int tamPop) {
+  printf("Dados de Cada Individuo: \n");
   for(i = 0; i < tamPop; i++) {
     printf("Individuo%d: ", i);
-    printf(" %d \t", pesoIndividuo[i]);
-    printf(" %d ", benefIndividuo[i]);
+    printf("Peso: %d \t", pesoIndividuo[i]);
+    printf("Excesso: %d \t", excessoIndividuo[i]);
+    printf("Benef: %d ", benefIndividuo[i]);
     printf("\n");
   }
 }

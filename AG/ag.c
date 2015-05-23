@@ -12,10 +12,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TAM_POP 7 // Tamanho da população (Quantidade de Individuos)
-#define TAM_IND 5 // Quantidade de Objetos
+#define TAM_POP 5 // Tamanho da população (Quantidade de Individuos)
+#define TAM_IND 3 // Quantidade de Objetos
 #define GERACOES 10 // Numero de Iteracoes
-#define PENALIDADE 50 // penalidade por exceder
+#define PENALIDADE 25 // penalidade por exceder
 
 int i, j; //contador usado nos loops
 
@@ -37,6 +37,7 @@ int main() {
   gerarBeneficio(beneficios, TAM_IND);
   capacidade = calcularCapacidade(pesos, TAM_IND);
   printf("\n");
+  srand((unsigned)time(NULL));
   popular(pop, TAM_POP, TAM_IND);
   calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
   calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade, TAM_POP);
@@ -62,11 +63,23 @@ int main() {
 * @param tamIndiv - tamanho do individuo (numero de objetos)
 */
 void popular(int populacao[][TAM_IND], int tamPop, int tamIndiv) {
-  srand((unsigned)time(NULL));
+  // Contador p/ de zeros e ums
+  int auxZero = 0;
+  int auxUm = 0;
+
   for (i = 0; i < tamPop; i++) {
     for (j = 0; j < tamIndiv; j++) {
       populacao[i][j] = rand() % 2; //escolhe 0 ou 1.
+      if (populacao[i][j] == 0) // Conta o numero de 0s e 1s do individuo
+        auxZero++;
+      else
+        auxUm++;
     }
+    // Caso o individuo seja formado totalmente por 0s ou 1s, renicia-se o laço externo.
+    if (auxZero == tamIndiv || auxUm == tamIndiv)
+      i--;
+    auxZero = 0;
+    auxUm = 0;
   }
 
   printf("Solucao inicial aleatoria:\n");

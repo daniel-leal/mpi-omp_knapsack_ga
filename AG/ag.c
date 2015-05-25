@@ -4,25 +4,28 @@
 * @instituição:       Centro Universitário do Estado do Pará (CESUPA)
 * @descrição:         Análise de Desempenho de um Algortimo Genético para
 *                     a solução do problema da mochila booleana.
-* @uso:               gcc ag.c -o <output_file> -O -w //Compilar
-*                     ./<output_file> //Executa
+* @uso:               gcc ag.c -o <output_file> -O -w   //Compila
+*                     ./<output_file>                   //Executa
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define TAM_POP 5 // Tamanho da população (Quantidade de Individuos)
-#define TAM_IND 3 // Quantidade de Objetos
-#define GERACOES 10 // Numero de Iteracoes
-#define PENALIDADE 25 // penalidade por exceder
+#define TAM_POP 5                           //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 3                           //quantidade de Objetos
+#define TAM_TORNEIO 2                       //quantidade de competicoes
+#define GERACOES 10                         //numero de Iteracoes
+#define PENALIDADE 25                       //penalidade por exceder
 
-int i, j; //contador usado nos loops
+
+int i, j;                                   //contador usado nos loops
 
 int main() {
 
   /* Declaracao das variaveis */
-  int pop[TAM_POP][TAM_IND];                //população de individuos
+  int pop[TAM_POP][TAM_IND];                //populacao de individuos
+  int popIntermed[TAM_POP][TAM_IND];        //populacao gerada pelos torneios
   int pesos[TAM_IND];                       //peso de cada objeto
   int beneficios[TAM_IND];                  //benf. de cada objeto
   int capacidade;                           //capacidade da mochila
@@ -38,16 +41,24 @@ int main() {
   capacidade = calcularCapacidade(pesos, TAM_IND);
   printf("\n");
   srand((unsigned)time(NULL));
-  popular(pop, TAM_POP, TAM_IND);
-  calcularPesoIndividuo(pop, pesoIndividuo, TAM_POP, TAM_IND, pesos);
-  calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade, TAM_POP);
-  calcularPenalidade(pop, PENALIDADE, TAM_IND, TAM_POP, penalidadeIndividuo);
+  popular(pop);
+  calcularPesoIndividuo(pop, pesoIndividuo, pesos);
+  calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
+  calcularPenalidade(pop, PENALIDADE, penalidadeIndividuo);
 
-  /* Medir qualidade da Solucao */
-  calcularBenefIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, beneficios, penalidadeIndividuo, excessoIndividuo);
-  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo, TAM_POP);
-  verificarMelhorIndividuo(pop, benefIndividuo, TAM_POP, TAM_IND, melhorIndividuo);
-  imprimirMelhorIndividuo(melhorIndividuo, TAM_IND);
+  /* Medir qualidade da Solucao Aleatoria */
+  calcularBenefIndividuo(pop, benefIndividuo, beneficios, penalidadeIndividuo, excessoIndividuo);
+  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
+  verificarMelhorIndividuo(pop, benefIndividuo, melhorIndividuo);
+  imprimirMelhorIndividuo(melhorIndividuo);
+
+  /* Test */
+  srand((unsigned)time(NULL));
+  torneio(pop, popIntermed, benefIndividuo);
+  printf("População Intermediaria - Torneio\n");
+  imprimirPop(popIntermed);
+
+
   printf("\n");
 
   return 0;
@@ -59,44 +70,40 @@ int main() {
 *                     As linhas são os individuos e as
 *                     colunas sao as caracteristicas
 *                     do individuo 1 ou 0 (tem || n tem o objeto na mochila)
-* @param tamPop - tamanho da populacao
-* @param tamIndiv - tamanho do individuo (numero de objetos)
 */
-void popular(int populacao[][TAM_IND], int tamPop, int tamIndiv) {
+void popular(int populacao[][TAM_IND]) {
   // Contador p/ de zeros e ums
   int auxZero = 0;
   int auxUm = 0;
 
-  for (i = 0; i < tamPop; i++) {
-    for (j = 0; j < tamIndiv; j++) {
-      populacao[i][j] = rand() % 2; //escolhe 0 ou 1.
+  for (i = 0; i < TAM_POP; i++) {
+    for (j = 0; j < TAM_IND; j++) {
+      populacao[i][j] = rand() % 2;
       if (populacao[i][j] == 0) // Conta o numero de 0s e 1s do individuo
         auxZero++;
       else
         auxUm++;
     }
     // Caso o individuo seja formado totalmente por 0s ou 1s, renicia-se o laço externo.
-    if (auxZero == tamIndiv || auxUm == tamIndiv)
+    if (auxZero == TAM_IND || auxUm == TAM_IND)
       i--;
     auxZero = 0;
     auxUm = 0;
   }
 
   printf("Solucao inicial aleatoria:\n");
-  imprimirPop(populacao, tamPop, tamIndiv);
+  imprimirPop(populacao);
   printf("\n");
 }
 
 /*
 * Imprime a população
 * @param vet - matriz populacao
-* @param tamPop - tamanho da populacao
-* @param tamIndiv - tamanho do individuo (Qtde de Elementos)
 */
-void imprimirPop(int vet[][TAM_IND], int tamPop, int tamIndiv) {
-  for (i = 0 ; i < tamPop; i++) {
+void imprimirPop(int vet[][TAM_IND]) {
+  for (i = 0 ; i < TAM_POP; i++) {
     printf("Individuo%d: ", i);
-    for(j = 0; j < tamIndiv; j++) {
+    for(j = 0; j < TAM_IND; j++) {
       printf(" %d ", vet[i][j]);
     }
     printf("\n");
@@ -110,9 +117,8 @@ void imprimirPop(int vet[][TAM_IND], int tamPop, int tamIndiv) {
 */
 void gerarPesos(int p[], int qtde) {
   srand((unsigned)time(NULL));
-  for (i = 0; i < qtde; i++) {
+  for (i = 0; i < qtde; i++)
     p[i] = rand() % 50;
-  }
   imprimirPesos(p, qtde);
 }
 
@@ -190,14 +196,12 @@ int calcularPesoTotal(int p[], int qtde) {
 * Isto é, todos os elementos com valor 1 de cada individuo.
 * @param populacao - populacao de individuos
 * @param pesoObjetos - vetor contendo o peso de cada individuo
-* @param tamPop - tamanho da populacao
-* @param tamIndiv- tamanho do individuo
 * @param p - vetor de pesos
 */
-void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int tamPop, int tamIndiv, int p[]) {
+void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int p[]) {
   int aux = 0;
-  for(i = 0; i < tamPop; i++) {
-    for(j = 0; j < tamIndiv; j++) {
+  for(i = 0; i < TAM_POP; i++) {
+    for(j = 0; j < TAM_IND; j++) {
       if (populacao[i][j])
         aux += p[j];
     }
@@ -213,8 +217,8 @@ void calcularPesoIndividuo(int populacao[][TAM_IND], int pesoIndividuo[], int ta
 * @param excessoIndividuo - vetor que sera preenchido com o excesso de peso dos individuos
 * @param capacidade - capacidade de peso da mochila.
 */
-void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int capacidade, int tamPop) {
-  for(i = 0; i < tamPop; i++) {
+void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int capacidade) {
+  for(i = 0; i < TAM_POP; i++) {
     if (pesoIndividuo[i] - capacidade <  0)
       excessoIndividuo[i] = 0;
     else
@@ -227,17 +231,15 @@ void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int c
 * Isto é, todos os elementos com valor 1 de cada individuo.
 * @param populacao - populacao de individuos
 * @param benefIndividuo - vetor contendo a soma dos beneficios de cada individuo
-* @param tamPop - tamanho da populacao
-* @param tamIndiv- tamanho do individuo
 * @param b - vetor contendo os beneficios de cada objeto
 * @param penalidadeIndividuo - vetor contendo a penalidade por exceder de cada individuo
 * @param excessoIndividuo - vetor contendo o valor de excesso de cada individuo
 */
-void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int b[], int penalidadeIndividuo[], int excessoIndividuo[]) {
+void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int b[], int penalidadeIndividuo[], int excessoIndividuo[]) {
 
   int aux = 0;
-  for(i = 0; i < tamPop; i++) {
-    for(j = 0; j < tamIndiv; j++)
+  for(i = 0; i < TAM_POP; i++) {
+    for(j = 0; j < TAM_IND; j++)
       if (populacao[i][j])
         aux += b[j] - penalidadeIndividuo[i] * excessoIndividuo[i];
     benefIndividuo[i] = aux;
@@ -250,15 +252,14 @@ void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int 
 * @param pesoIndividuo - vetor com o peso de cada individuo
 * @param benefIndividuo - vetor com o beneficio de cada individuo
 * @param excessoIndividuo - vetor com o excesso de cada individuo
-* @param tamPop - Quantidade de objetos (Individuos)
 */
-void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[], int tamPop) {
+void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[]) {
   printf("Dados de Cada Individuo: \n");
-  for(i = 0; i < tamPop; i++) {
+  for(i = 0; i < TAM_POP; i++) {
     printf("Individuo%d: ", i);
     printf("Peso: %d \t", pesoIndividuo[i]);
     printf("Excesso: %d \t", excessoIndividuo[i]);
-    printf("Benef: %d ", benefIndividuo[i]);
+    printf("Fitness: %d ", benefIndividuo[i]);
     printf("\n");
   }
 }
@@ -268,16 +269,14 @@ void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int exces
 * parametro de penalidade definido pelo usuário
 * @param populacao - matriz contendo todos os inviduos
 * @param penalidade - penalidade definida pelo usuario
-* @param tamIndiv - numero de objetos disponiveis
-* @param tamPop - numero de individuos
 * @param penalidadeIndividuo - vetor a ser preenchido com as penalidades
 */
-void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, int tamPop, int penalidadeIndividuo[]) {
+void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int penalidadeIndividuo[]) {
 
   int aux = 0;
 
-  for(i = 0; i<tamPop; i++) {
-    for(j = 0 ; j < tamIndiv; j++) {
+  for(i = 0; i<TAM_POP; i++) {
+    for(j = 0 ; j < TAM_IND; j++) {
       if (populacao[i][j])
         aux++;
     }
@@ -290,32 +289,29 @@ void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int tamIndiv, 
 * Verifica o individuo que tem o maior beneficio e guarda num vetor (melhorIndividuo) os itens.
 * @param populacao - Conjunto de Individuos
 * @param benefIndividuo - vetor com a soma dos beneficios de cada individuo
-* @param tamPop - tamanho da populacao
-* @param tamIndiv - quantidade de objetos
 * @param melhorIndividuo - vetor a ser preenchido com o melhor individuo
 */
-void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int tamPop, int tamIndiv, int melhorIndividuo[]) {
+void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int melhorIndividuo[]) {
   int indiceMaiorBenef = 0;
   int maiorBenef = benefIndividuo[0];
 
-  for(i = 1; i < tamPop; i++)
+  for(i = 1; i < TAM_POP; i++)
     if (maiorBenef < benefIndividuo[i]) {
       maiorBenef = benefIndividuo[i];
       indiceMaiorBenef = i;
     }
 
-  for (i = 0; i < tamIndiv; i++)
+  for (i = 0; i < TAM_IND; i++)
     melhorIndividuo[i] = populacao[indiceMaiorBenef][i];
 }
 
 /*
 * Imprime o melhor individuo
 * @param melhorIndividuo - vetor contendo o melhor indiviudo
-* @param tamIndiv - quantidade de objetos
 */
-void imprimirMelhorIndividuo(int melhorIndividuo[], int tamIndiv) {
+void imprimirMelhorIndividuo(int melhorIndividuo[]) {
   printf("\nMelhor Individuo: \n");
-  for(i = 0; i < tamIndiv; i++)
+  for(i = 0; i < TAM_IND; i++)
     printf("%d ", melhorIndividuo[i]);
 }
 
@@ -327,4 +323,43 @@ void imprimirMelhorIndividuo(int melhorIndividuo[], int tamIndiv) {
 */
 int ehPar(int n) {
   return n % 2 == 0 ? 1 : 0;
+}
+
+/*
+* Seleciona aleatoriamente N individuos para competirem.
+* A fitness define o vencedor dos torneios.
+* @param pop - Populacao de inviduos
+* @param popIntermed - Populacao gerada pelos torneios
+* @param benefIndividuo - vetor com o fitness de cada indiviudo
+*/
+void torneio(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[]) {
+  int torneios[TAM_POP][TAM_TORNEIO];    //matriz das competicoes
+  int aux[TAM_POP];                      //indices populacao intermediaria
+
+  int maior = 0;
+
+  printf("\n\nTorneio: \n");
+  for(i = 0; i < TAM_POP; i++) {
+    for(j = 0; j < TAM_TORNEIO; j++) {
+      torneios[i][j] = rand() % TAM_POP; // Preencher a matriz de torneios com individuos
+      printf(" %d ", torneios[i][j]);
+      if (benefIndividuo[torneios[i][j]] > benefIndividuo[maior]) // Analisa qual individuo tem a > fitness
+        maior = torneios[i][j];
+    }
+    printf("\n");
+    aux[i] = maior;
+    maior = 0;
+  }
+
+  printf("\n");
+
+  //Preencher populacaoIntermediaria
+  for(i = 0; i < TAM_POP; i++)
+    for(j = 0; j < TAM_IND; j++)
+      popIntermed[i][j] = pop[aux[i]][j];
+}
+
+
+void crossOver() {
+
 }

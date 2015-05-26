@@ -1,0 +1,13 @@
+Parâmetros para o teste:
+Variar a capacidade da mochila em relação ao peso total.
+
+Valores da Capacidade:
+0.25
+0.50
+0.80
+
+Deixar valores fixos p/
+TAMANHO DA POP
+TAMANHO DO INDIV
+TAMANHO DO TORNEIO
+QUANTIDADE DE GERACOES

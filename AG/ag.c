@@ -12,20 +12,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TAM_POP 5                           //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 3                           //quantidade de Objetos
-#define TAM_TORNEIO 2                       //quantidade de competicoes
-#define GERACOES 10                         //numero de Iteracoes
-#define PENALIDADE 25                       //penalidade por exceder
+#define TAM_POP 10                          //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 6                           //quantidade de Objetos
+#define TAM_TORNEIO 3                       //quantidade de competicoes
+#define GERACOES 6                          //numero de Iteracoes
+#define PENALIDADE 2                        //penalidade por exceder
+#define CAPACIDADE 0.6f                     //capacidade em relacao ao peso total.
 
-
-int i, j;                                   //contador usado nos loops
+int i, j, k;                                   //contador usado nos loops
 
 int main() {
 
   /* Declaracao das variaveis */
   int pop[TAM_POP][TAM_IND];                //populacao de individuos
-  int popIntermed[TAM_POP][TAM_IND];        //populacao gerada pelos torneios
+  int popIntermed[TAM_POP][TAM_IND];        //populacao gerada pelos torneio
   int pesos[TAM_IND];                       //peso de cada objeto
   int beneficios[TAM_IND];                  //benf. de cada objeto
   int capacidade;                           //capacidade da mochila
@@ -35,28 +35,43 @@ int main() {
   int penalidadeIndividuo[TAM_POP];         //penalidade de cada individuo por exceder.
   int melhorIndividuo[TAM_IND];             //melhor individuo
 
-  /* Fluxo do Programa */
+  /* Construir o Problema */
   gerarPesos(pesos, TAM_IND);
   gerarBeneficio(beneficios, TAM_IND);
   capacidade = calcularCapacidade(pesos, TAM_IND);
   printf("\n");
   srand((unsigned)time(NULL));
   popular(pop);
+
+
+  /* Medir qualidade da Solucao Aleatoria */
   calcularPesoIndividuo(pop, pesoIndividuo, pesos);
   calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
   calcularPenalidade(pop, PENALIDADE, penalidadeIndividuo);
-
-  /* Medir qualidade da Solucao Aleatoria */
   calcularBenefIndividuo(pop, benefIndividuo, beneficios, penalidadeIndividuo, excessoIndividuo);
   imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
-  verificarMelhorIndividuo(pop, benefIndividuo, melhorIndividuo);
-  imprimirMelhorIndividuo(melhorIndividuo);
 
-  /* Test */
+  /* Torneio (Selecao dos melhores individuos) */
   srand((unsigned)time(NULL));
   torneio(pop, popIntermed, benefIndividuo);
   printf("População Intermediaria - Torneio\n");
   imprimirPop(popIntermed);
+  printf("\n");
+
+  /* Medir qualidade dos individuos selecionados */
+  calcularPesoIndividuo(popIntermed, pesoIndividuo, pesos);
+  calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
+  calcularPenalidade(popIntermed, PENALIDADE, penalidadeIndividuo);
+  calcularBenefIndividuo(popIntermed, benefIndividuo, beneficios, penalidadeIndividuo, excessoIndividuo);
+  imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
+
+  /* Cruzamento */
+  printf("\n---- Inicio Cruzamento ---\n");
+  crossOver(popIntermed, benefIndividuo, pesoIndividuo, excessoIndividuo, pesos, capacidade, PENALIDADE, penalidadeIndividuo, beneficios);
+  printf("\n");
+  /* Medir Qualidade apos o cruzamento */
+  verificarMelhorIndividuo(popIntermed, benefIndividuo, melhorIndividuo);
+  imprimirMelhorIndividuo(melhorIndividuo);
 
 
   printf("\n");
@@ -170,7 +185,7 @@ void imprimirBeneficios(int b[], int qtde) {
 */
 int calcularCapacidade(int p[], int qtde) {
   int peso = calcularPesoTotal();
-  int c = peso * 0.6;
+  int c = peso * CAPACIDADE;
   printf("Capacidade da mochila: %d\n", c);
 
   return c;
@@ -327,13 +342,13 @@ int ehPar(int n) {
 
 /*
 * Seleciona aleatoriamente N individuos para competirem.
-* A fitness define o vencedor dos torneios.
+* A fitness define o vencedor dos torneio.
 * @param pop - Populacao de inviduos
-* @param popIntermed - Populacao gerada pelos torneios
+* @param popIntermed - Populacao gerada pelos torneio
 * @param benefIndividuo - vetor com o fitness de cada indiviudo
 */
 void torneio(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[]) {
-  int torneios[TAM_POP][TAM_TORNEIO];    //matriz das competicoes
+  int torneio[TAM_POP][TAM_TORNEIO];     //matriz das competicoes
   int aux[TAM_POP];                      //indices populacao intermediaria
 
   int maior = 0;
@@ -341,10 +356,10 @@ void torneio(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[
   printf("\n\nTorneio: \n");
   for(i = 0; i < TAM_POP; i++) {
     for(j = 0; j < TAM_TORNEIO; j++) {
-      torneios[i][j] = rand() % TAM_POP; // Preencher a matriz de torneios com individuos
-      printf(" %d ", torneios[i][j]);
-      if (benefIndividuo[torneios[i][j]] > benefIndividuo[maior]) // Analisa qual individuo tem a > fitness
-        maior = torneios[i][j];
+      torneio[i][j] = rand() % TAM_POP; // Preencher a matriz de torneio com individuos
+      printf(" %d ", torneio[i][j]);
+      if (benefIndividuo[torneio[i][j]] > benefIndividuo[maior]) // Analisa qual individuo tem a > fitness
+        maior = torneio[i][j];
     }
     printf("\n");
     aux[i] = maior;
@@ -359,7 +374,73 @@ void torneio(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[
       popIntermed[i][j] = pop[aux[i]][j];
 }
 
+/*
+* Combina os individuos da população
+*/
+void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo[], int excessoIndividuo[], int pesos[], int capacidade, int penalidade, int penalidadeIndividuo[], int beneficios[]) {
 
-void crossOver() {
+  int indiceMaiorBenef = 0, indiceMenorBenef = 0, indiceSegundoMaiorBenef = 0;
+  int maiorBenef = benefIndividuo[0], menorBenef = benefIndividuo[0], segundoMaiorBenef = benefIndividuo[0];
 
+  for(k = 0; k < GERACOES; k++) {
+    printf("\n---- GERACAO: %d -----\n", k);
+
+    for(j = 1; j < TAM_POP; j++) {
+      if (benefIndividuo[j] > maiorBenef) {
+        maiorBenef = benefIndividuo[j];
+        indiceMaiorBenef = j;
+      }
+      if (benefIndividuo[j] < menorBenef) {
+        menorBenef = benefIndividuo[j];
+        indiceMenorBenef = j;
+      }
+    }
+    for (j = 1; j < TAM_POP; j++) {
+      if (benefIndividuo[j] > segundoMaiorBenef && j != indiceMaiorBenef) {
+        segundoMaiorBenef = benefIndividuo[j];
+        indiceSegundoMaiorBenef = j;
+      }
+    }
+
+    printf("Maior Beneficio: %d\n", maiorBenef);
+    printf("Indice Maior Benef: %d\n", indiceMaiorBenef);
+    printf("Segundo Maior Beneficio: %d\n", segundoMaiorBenef);
+    printf("Indice Segundo Maior Benef: %d\n", indiceSegundoMaiorBenef);
+    printf("Menor Beneficio: %d\n", menorBenef);
+    printf("Indice Menor Benef: %d\n", indiceMenorBenef);
+
+    if(ehPar(TAM_IND)) {
+      for(j = 0; j < TAM_IND / 2; j++)
+        populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
+      for(j = TAM_IND / 2; j < TAM_IND; j++)
+        populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
+    }
+    else {
+      for(j = 0; j < (TAM_IND+1) / 2; j++)
+        populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
+      for(j = (TAM_IND+1)/2; j < TAM_IND; j++)
+        populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
+    }
+
+    for (i = 0; i < TAM_POP; i++){
+      for(j = 0; j < TAM_IND; j++) {
+        printf(" %d ", populacao[i][j]);
+      }
+      printf("\n");
+    }
+
+    maiorBenef = benefIndividuo[0];
+    segundoMaiorBenef = benefIndividuo[0];
+    menorBenef = benefIndividuo[0];
+    indiceMaiorBenef = 0;
+    indiceMenorBenef = 0;
+    indiceSegundoMaiorBenef = 0;
+
+    printf("\n");
+    calcularPesoIndividuo(populacao, pesoIndividuo, pesos);
+    calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
+    calcularPenalidade(populacao, PENALIDADE, penalidadeIndividuo);
+    calcularBenefIndividuo(populacao, benefIndividuo, beneficios, penalidadeIndividuo, excessoIndividuo);
+    imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
+  }
 }

@@ -11,8 +11,8 @@
 #include "alocacao_complex.c"
 #include <time.h>
 
-#define TAM_POP 1000                        //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 15                          //quantidade de Objetos
+#define TAM_POP 500                         //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 12                          //quantidade de Objetos
 #define TAM_TORNEIO 3                       //quantidade de competicoes
 #define GERACOES 6                          //numero de Iteracoes
 #define PENALIDADE 2                        //penalidade por exceder

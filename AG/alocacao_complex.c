@@ -2,7 +2,7 @@
     funcoes especiais p/ inicializacao
     do programa e abstração dos ponteiros
 
-    [ alocacao dinamica de arrays do tipo int complex ]
+    [ alocacao dinamica de arrays do tipo int ]
 */
 
 #include <stdlib.h>
@@ -10,25 +10,25 @@
 #include <math.h>
 #include <complex.h>
 
-#define array1d(x,s)     int complex *x   = calloc(s+1,sizeof(int complex))
-#define array2d(x,i,j)   int complex **x  = falloc2d(0,i,0,j)
-#define array3d(x,i,j,k) int complex ***x = falloc3d(0,i,0,j,0,k)
+#define array1d(x,s)     int *x   = calloc(s+1,sizeof(int))
+#define array2d(x,i,j)   int **x  = falloc2d(0,i,0,j)
+#define array3d(x,i,j,k) int ***x = falloc3d(0,i,0,j,0,k)
 
 
-int complex **falloc2d(int nrl, int nrh, int ncl, int nch)
-/* Aloca dinamicamente Array int complex 2D na faixa [nrl..nrh][ncl..nch]*/
+int **falloc2d(int nrl, int nrh, int ncl, int nch)
+/* Aloca dinamicamente Array int 2D na faixa [nrl..nrh][ncl..nch]*/
 {
     int i, nrow=nrh-nrl+1,ncol=nch-ncl+1;
-    int complex **m;
+    int **m;
 
-    m=(int complex **) malloc((size_t)((nrow+1)*sizeof(int complex*)));
+    m=(int **) malloc((size_t)((nrow+1)*sizeof(int*)));
 
     if (!m) printf("Falha de alocacao!\n");
 
     m += 1;
     m -= nrl;
 
-    m[nrl]=(int complex *) malloc((size_t)((nrow*ncol+1)*sizeof(int complex)));
+    m[nrl]=(int *) malloc((size_t)((nrow*ncol+1)*sizeof(int)));
 
     if (!m[nrl]) printf("Falha de alocacao!\n");
 
@@ -41,28 +41,28 @@ int complex **falloc2d(int nrl, int nrh, int ncl, int nch)
 }
 
 
-int complex ***falloc3d(int nrl, int nrh, int ncl, int nch, int ndl, int ndh)
-/* Aloca dinamicamente Array int complex 3D na faixa [nrl..nrh][ncl..nch][ndl..ndh] */
+int ***falloc3d(int nrl, int nrh, int ncl, int nch, int ndl, int ndh)
+/* Aloca dinamicamente Array int 3D na faixa [nrl..nrh][ncl..nch][ndl..ndh] */
 {
     int i,j,nrow=nrh-nrl+1,ncol=nch-ncl+1,ndep=ndh-ndl+1;
 
-    int complex ***t;
+    int ***t;
 
-    t=(int complex ***) malloc((size_t)((nrow+1)*sizeof(int complex**)));
+    t=(int ***) malloc((size_t)((nrow+1)*sizeof(int**)));
 
     if (!t) printf("Falha de alocacao!\n");
 
     t += 1;
     t -= nrl;
 
-    t[nrl]=(int complex **) malloc((size_t)((nrow*ncol+1)*sizeof(int complex*)));
+    t[nrl]=(int **) malloc((size_t)((nrow*ncol+1)*sizeof(int*)));
 
     if (!t[nrl]) printf("Falha de alocacao!\n");
 
     t[nrl] += 1;
     t[nrl] -= ncl;
 
-    t[nrl][ncl]=(int complex *) malloc((size_t)((nrow*ncol*ndep+1)*sizeof(int complex)));
+    t[nrl][ncl]=(int *) malloc((size_t)((nrow*ncol*ndep+1)*sizeof(int)));
 
     if (!t[nrl][ncl]) printf("Falha de alocacao 3\n");
 

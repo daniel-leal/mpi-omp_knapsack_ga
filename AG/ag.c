@@ -8,32 +8,32 @@
 *                     ./<output_file>                   //Executa
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "alocacao_complex.c"
 #include <time.h>
 
-#define TAM_POP 10                          //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 6                           //quantidade de Objetos
+#define TAM_POP 1000                        //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 15                          //quantidade de Objetos
 #define TAM_TORNEIO 3                       //quantidade de competicoes
 #define GERACOES 6                          //numero de Iteracoes
 #define PENALIDADE 2                        //penalidade por exceder
 #define CAPACIDADE 0.6f                     //capacidade em relacao ao peso total.
 
-int i, j, k;                                   //contador usado nos loops
+int i, j, k;                                //contador usado nos loops
 
 int main() {
 
   /* Declaracao das variaveis */
-  int pop[TAM_POP][TAM_IND];                //populacao de individuos
-  int popIntermed[TAM_POP][TAM_IND];        //populacao gerada pelos torneio
-  int pesos[TAM_IND];                       //peso de cada objeto
-  int beneficios[TAM_IND];                  //benf. de cada objeto
+  array2d(pop, TAM_POP, TAM_IND);           //populacao de individuos
+  array2d(popIntermed, TAM_POP, TAM_IND);   //populacao gerada pelos torneio
+  array1d(pesos, TAM_IND);                  //peso de cada objeto
+  array1d(beneficios, TAM_IND);             //benf. de cada objeto
   int capacidade;                           //capacidade da mochila
-  int pesoIndividuo[TAM_POP];               //soma dos pesos de cada individuo
-  int excessoIndividuo[TAM_POP];            //excesso de cada individuo
-  int benefIndividuo[TAM_POP];              //beneficio de cada individuo
-  int penalidadeIndividuo[TAM_POP];         //penalidade de cada individuo por exceder.
-  int melhorIndividuo[TAM_IND];             //melhor individuo
+  array1d(pesoIndividuo, TAM_POP);          //soma dos pesos de cada individuo
+  array1d(excessoIndividuo, TAM_POP);       //excesso de cada individuo
+  array1d(benefIndividuo, TAM_POP);         //beneficio de cada individuo
+  array1d(penalidadeIndividuo, TAM_POP);    //penalidade de cada individuo por exceder.
+  array1d(melhorIndividuo, TAM_IND);        //melhor individuo
+  array2d(torneio, TAM_POP, TAM_TORNEIO);   //matriz das competicoes
 
   /* Construir o Problema */
   gerarPesos(pesos, TAM_IND);
@@ -53,7 +53,7 @@ int main() {
 
   /* Torneio (Selecao dos melhores individuos) */
   srand((unsigned)time(NULL));
-  torneio(pop, popIntermed, benefIndividuo);
+  competir(pop, popIntermed, benefIndividuo, torneio);
   printf("População Intermediaria - Torneio\n");
   imprimirPop(popIntermed);
   printf("\n");
@@ -347,9 +347,8 @@ int ehPar(int n) {
 * @param popIntermed - Populacao gerada pelos torneio
 * @param benefIndividuo - vetor com o fitness de cada indiviudo
 */
-void torneio(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[]) {
-  int torneio[TAM_POP][TAM_TORNEIO];     //matriz das competicoes
-  int aux[TAM_POP];                      //indices populacao intermediaria
+void competir(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo[], int torneio[][TAM_IND]) {
+  int aux[TAM_POP]; //indices populacao intermediaria
 
   int maior = 0;
 

@@ -11,12 +11,12 @@
 #include "alocacao_complex.c"
 #include <time.h>
 
-#define TAM_POP 500                         //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 12                          //quantidade de Objetos
+#define TAM_POP 20                          //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 8                           //quantidade de Objetos
 #define TAM_TORNEIO 3                       //quantidade de competicoes
 #define GERACOES 6                          //numero de Iteracoes
 #define PENALIDADE 2                        //penalidade por exceder
-#define CAPACIDADE 0.6f                     //capacidade em relacao ao peso total.
+#define CAPACIDADE 0.8f                     //capacidade em relacao ao peso total.
 
 int i, j, k;                                //contador usado nos loops
 
@@ -380,6 +380,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
 
   int indiceMaiorBenef = 0, indiceMenorBenef = 0, indiceSegundoMaiorBenef = 0;
   int maiorBenef = benefIndividuo[0], menorBenef = benefIndividuo[0], segundoMaiorBenef = benefIndividuo[0];
+  int mutacao;
 
   for(k = 0; k < GERACOES; k++) {
     printf("\n---- GERACAO: %d -----\n", k);
@@ -408,17 +409,48 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     printf("Menor Beneficio: %d\n", menorBenef);
     printf("Indice Menor Benef: %d\n", indiceMenorBenef);
 
+
+    mutacao = rand() % 50;
+
     if(ehPar(TAM_IND)) {
       for(j = 0; j < TAM_IND / 2; j++)
-        populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
+        if (mutacao > 45) {
+          if (populacao[indiceMaiorBenef][j] == 0)
+            populacao[indiceMenorBenef][j] = 1;
+          else
+            populacao[indiceMenorBenef][j] = 0;
+        }
+        else
+          populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = TAM_IND / 2; j < TAM_IND; j++)
-        populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
+        if (mutacao > 45) {
+          if (populacao[indiceSegundoMaiorBenef][j] == 0)
+            populacao[indiceMenorBenef][j] = 1;
+          else
+            populacao[indiceMenorBenef][j] = 0;
+        }
+        else
+          populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
     }
     else {
       for(j = 0; j < (TAM_IND+1) / 2; j++)
-        populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
+        if (mutacao > 45) {
+          if (populacao[indiceMaiorBenef][j] == 0)
+            populacao[indiceMenorBenef][j] = 1;
+          else
+            populacao[indiceMenorBenef][j] = 0;
+        }
+        else
+          populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = (TAM_IND+1)/2; j < TAM_IND; j++)
-        populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
+        if (mutacao > 45) {
+          if (populacao[indiceSegundoMaiorBenef][j] == 0)
+            populacao[indiceMenorBenef][j] = 1;
+          else
+            populacao[indiceMenorBenef][j] = 0;
+        }
+        else
+          populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
     }
 
     for (i = 0; i < TAM_POP; i++){

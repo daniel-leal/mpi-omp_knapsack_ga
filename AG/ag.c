@@ -8,7 +8,7 @@
 *                     ./<output_file>                   //Executa
 */
 
-#include "alocacao_complex.c"
+#include "alocacao.c"
 #include <time.h>
 
 #define TAM_POP 20                          //tamanho da população (Quantidade de Individuos)
@@ -16,11 +16,14 @@
 #define TAM_TORNEIO 3                       //quantidade de competicoes
 #define GERACOES 6                          //numero de Iteracoes
 #define PENALIDADE 2                        //penalidade por exceder
-#define CAPACIDADE 0.8f                     //capacidade em relacao ao peso total.
+#define CAPACIDADE 0.45f                     //capacidade em relacao ao peso total.
 
 int i, j, k;                                //contador usado nos loops
+FILE *arquivo;
+
 
 int main() {
+  arquivo  = fopen("info.dat","w");
 
   /* Declaracao das variaveis */
   array2d(pop, TAM_POP, TAM_IND);           //populacao de individuos
@@ -39,7 +42,7 @@ int main() {
   gerarPesos(pesos, TAM_IND);
   gerarBeneficio(beneficios, TAM_IND);
   capacidade = calcularCapacidade(pesos, TAM_IND);
-  printf("\n");
+  fprintf(arquivo, "\n");
   srand((unsigned)time(NULL));
   popular(pop);
 
@@ -54,9 +57,9 @@ int main() {
   /* Torneio (Selecao dos melhores individuos) */
   srand((unsigned)time(NULL));
   competir(pop, popIntermed, benefIndividuo, torneio);
-  printf("População Intermediaria - Torneio\n");
+  fprintf(arquivo, "População Intermediaria - Torneio\n");
   imprimirPop(popIntermed);
-  printf("\n");
+  fprintf(arquivo, "\n");
 
   /* Medir qualidade dos individuos selecionados */
   calcularPesoIndividuo(popIntermed, pesoIndividuo, pesos);
@@ -66,15 +69,17 @@ int main() {
   imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
 
   /* Cruzamento */
-  printf("\n---- Inicio Cruzamento ---\n");
+  fprintf(arquivo, "\n---- Inicio Cruzamento ---\n");
   crossOver(popIntermed, benefIndividuo, pesoIndividuo, excessoIndividuo, pesos, capacidade, PENALIDADE, penalidadeIndividuo, beneficios);
-  printf("\n");
+  fprintf(arquivo, "\n");
   /* Medir Qualidade apos o cruzamento */
   verificarMelhorIndividuo(popIntermed, benefIndividuo, melhorIndividuo);
   imprimirMelhorIndividuo(melhorIndividuo);
 
 
-  printf("\n");
+  fprintf(arquivo, "\n");
+
+  fclose(arquivo);
 
   return 0;
 }
@@ -106,9 +111,9 @@ void popular(int populacao[][TAM_IND]) {
     auxUm = 0;
   }
 
-  printf("Solucao inicial aleatoria:\n");
+  fprintf(arquivo, "Solucao inicial aleatoria:\n");
   imprimirPop(populacao);
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -117,11 +122,11 @@ void popular(int populacao[][TAM_IND]) {
 */
 void imprimirPop(int vet[][TAM_IND]) {
   for (i = 0 ; i < TAM_POP; i++) {
-    printf("Individuo%d: ", i);
+    fprintf(arquivo, "Individuo%d: ", i);
     for(j = 0; j < TAM_IND; j++) {
-      printf(" %d ", vet[i][j]);
+      fprintf(arquivo, " %d ", vet[i][j]);
     }
-    printf("\n");
+    fprintf(arquivo, "\n");
   }
 }
 
@@ -156,11 +161,11 @@ void gerarBeneficio(int b[], int qtde) {
 * @param qtde - quantidade de objetos
 */
 void imprimirPesos(int p[], int qtde) {
-  printf("Pesos: ");
+  fprintf(arquivo, "Pesos: ");
   for(i = 0; i < qtde; i++) {
-    printf(" %d ", p[i]);
+    fprintf(arquivo, " %d ", p[i]);
   }
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -169,11 +174,11 @@ void imprimirPesos(int p[], int qtde) {
 * @param qtde - quantidade de objetos
 */
 void imprimirBeneficios(int b[], int qtde) {
-  printf("Valores: ");
+  fprintf(arquivo, "Valores: ");
   for(i = 0; i < qtde; i++) {
-    printf(" %d ", b[i]);
+    fprintf(arquivo, " %d ", b[i]);
   }
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -186,7 +191,7 @@ void imprimirBeneficios(int b[], int qtde) {
 int calcularCapacidade(int p[], int qtde) {
   int peso = calcularPesoTotal();
   int c = peso * CAPACIDADE;
-  printf("Capacidade da mochila: %d\n", c);
+  fprintf(arquivo, "Capacidade da mochila: %d\n", c);
 
   return c;
 }
@@ -269,13 +274,13 @@ void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int 
 * @param excessoIndividuo - vetor com o excesso de cada individuo
 */
 void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[]) {
-  printf("Dados de Cada Individuo: \n");
+  fprintf(arquivo, "Dados de Cada Individuo: \n");
   for(i = 0; i < TAM_POP; i++) {
-    printf("Individuo%d: ", i);
-    printf("Peso: %d \t", pesoIndividuo[i]);
-    printf("Excesso: %d \t", excessoIndividuo[i]);
-    printf("Fitness: %d ", benefIndividuo[i]);
-    printf("\n");
+    fprintf(arquivo, "Individuo%d: ", i);
+    fprintf(arquivo, "Peso: %d \t", pesoIndividuo[i]);
+    fprintf(arquivo, "Excesso: %d \t", excessoIndividuo[i]);
+    fprintf(arquivo, "Fitness: %d ", benefIndividuo[i]);
+    fprintf(arquivo, "\n");
   }
 }
 
@@ -325,9 +330,9 @@ void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], in
 * @param melhorIndividuo - vetor contendo o melhor indiviudo
 */
 void imprimirMelhorIndividuo(int melhorIndividuo[]) {
-  printf("\nMelhor Individuo: \n");
+  fprintf(arquivo, "\nMelhor Individuo: \n");
   for(i = 0; i < TAM_IND; i++)
-    printf("%d ", melhorIndividuo[i]);
+    fprintf(arquivo, "%d ", melhorIndividuo[i]);
 }
 
 
@@ -352,20 +357,20 @@ void competir(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo
 
   int maior = 0;
 
-  printf("\n\nTorneio: \n");
+  fprintf(arquivo, "\n\nTorneio: \n");
   for(i = 0; i < TAM_POP; i++) {
     for(j = 0; j < TAM_TORNEIO; j++) {
       torneio[i][j] = rand() % TAM_POP; // Preencher a matriz de torneio com individuos
-      printf(" %d ", torneio[i][j]);
+      fprintf(arquivo, " %d ", torneio[i][j]);
       if (benefIndividuo[torneio[i][j]] > benefIndividuo[maior]) // Analisa qual individuo tem a > fitness
         maior = torneio[i][j];
     }
-    printf("\n");
+    fprintf(arquivo, "\n");
     aux[i] = maior;
     maior = 0;
   }
 
-  printf("\n");
+  fprintf(arquivo, "\n");
 
   //Preencher populacaoIntermediaria
   for(i = 0; i < TAM_POP; i++)
@@ -383,7 +388,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
   int mutacao;
 
   for(k = 0; k < GERACOES; k++) {
-    printf("\n---- GERACAO: %d -----\n", k);
+    fprintf(arquivo, "\n---- GERACAO: %d -----\n", k);
 
     for(j = 1; j < TAM_POP; j++) {
       if (benefIndividuo[j] > maiorBenef) {
@@ -402,19 +407,19 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
       }
     }
 
-    printf("Maior Beneficio: %d\n", maiorBenef);
-    printf("Indice Maior Benef: %d\n", indiceMaiorBenef);
-    printf("Segundo Maior Beneficio: %d\n", segundoMaiorBenef);
-    printf("Indice Segundo Maior Benef: %d\n", indiceSegundoMaiorBenef);
-    printf("Menor Beneficio: %d\n", menorBenef);
-    printf("Indice Menor Benef: %d\n", indiceMenorBenef);
+    fprintf(arquivo, "Maior Beneficio: %d\n", maiorBenef);
+    fprintf(arquivo, "Indice Maior Benef: %d\n", indiceMaiorBenef);
+    fprintf(arquivo, "Segundo Maior Beneficio: %d\n", segundoMaiorBenef);
+    fprintf(arquivo, "Indice Segundo Maior Benef: %d\n", indiceSegundoMaiorBenef);
+    fprintf(arquivo, "Menor Beneficio: %d\n", menorBenef);
+    fprintf(arquivo, "Indice Menor Benef: %d\n", indiceMenorBenef);
 
 
-    mutacao = rand() % 50;
+    mutacao = rand() % 101;
 
     if(ehPar(TAM_IND)) {
       for(j = 0; j < TAM_IND / 2; j++)
-        if (mutacao > 45) {
+        if (mutacao > 99) {
           if (populacao[indiceMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -423,7 +428,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
         else
           populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = TAM_IND / 2; j < TAM_IND; j++)
-        if (mutacao > 45) {
+        if (mutacao > 99) {
           if (populacao[indiceSegundoMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -434,7 +439,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     }
     else {
       for(j = 0; j < (TAM_IND+1) / 2; j++)
-        if (mutacao > 45) {
+        if (mutacao > 99) {
           if (populacao[indiceMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -443,7 +448,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
         else
           populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = (TAM_IND+1)/2; j < TAM_IND; j++)
-        if (mutacao > 45) {
+        if (mutacao > 99) {
           if (populacao[indiceSegundoMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -455,9 +460,9 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
 
     for (i = 0; i < TAM_POP; i++){
       for(j = 0; j < TAM_IND; j++) {
-        printf(" %d ", populacao[i][j]);
+        fprintf(arquivo, " %d ", populacao[i][j]);
       }
-      printf("\n");
+      fprintf(arquivo, "\n");
     }
 
     maiorBenef = benefIndividuo[0];
@@ -467,7 +472,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     indiceMenorBenef = 0;
     indiceSegundoMaiorBenef = 0;
 
-    printf("\n");
+    fprintf(arquivo, "\n");
     calcularPesoIndividuo(populacao, pesoIndividuo, pesos);
     calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
     calcularPenalidade(populacao, PENALIDADE, penalidadeIndividuo);

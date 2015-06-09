@@ -8,37 +8,54 @@
 *                     ./<output_file>                   //Executa
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#include "alocacao.c"
 #include <time.h>
 
-#define TAM_POP 20                        //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 12                         //quantidade de Objetos
+#define TAM_POP 20                          //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 8                           //quantidade de Objetos
 #define TAM_TORNEIO 3                       //quantidade de competicoes
 #define GERACOES 6                          //numero de Iteracoes
 #define PENALIDADE 2                        //penalidade por exceder
-#define CAPACIDADE 0.45f                    //capacidade em relacao ao peso total.
+#define CAPACIDADE 0.6f                     //capacidade em relacao ao peso total.
 
 int i, j, k;                                //contador usado nos loops
 FILE *arquivo;
+
+/* Funcoes */
+void popular();
+void calcularPesoIndividuo();
+void calcularExcessoIndividuo();
+void calcularPenalidade();
+void calcularBenefIndividuo();
+void imprimirDadosIndividuo();
+void gerarPesos();
+void gerarBeneficio();
+void imprimirPop();
+void imprimirPesos();
+void imprimirBeneficios();
+void imprimirMelhorIndividuo();
+void verificarMelhorIndividuo();
+void competir();
+void crossOver();
+int calcularCapacidade();
+int calcularPesoTotal();
 
 
 int main() {
   arquivo  = fopen("info.dat","w");
 
   /* Declaracao das variaveis */
-  int pop[TAM_POP][TAM_IND];           //populacao de individuos
-  int popIntermed[TAM_POP][TAM_IND];   //populacao gerada pelos torneio
-  int pesos[TAM_IND];                  //peso de cada objeto
-  int beneficios[TAM_IND];             //benf. de cada objeto
+  array2d(pop, TAM_POP, TAM_IND);           //populacao de individuos
+  array2d(popIntermed, TAM_POP, TAM_IND);   //populacao gerada pelos torneio
+  array1d(pesos, TAM_IND);                  //peso de cada objeto
+  array1d(beneficios, TAM_IND);             //benf. de cada objeto
   int capacidade;                           //capacidade da mochila
-  int pesoIndividuo[TAM_POP];          //soma dos pesos de cada individuo
-  int excessoIndividuo[TAM_POP];       //excesso de cada individuo
-  int benefIndividuo[TAM_POP];         //beneficio de cada individuo
-  int penalidadeIndividuo[TAM_POP];    //penalidade de cada individuo por exceder.
-  int melhorIndividuo[TAM_IND];        //melhor individuo
-  int torneio[TAM_POP][TAM_TORNEIO];   //matriz das competicoes
+  array1d(pesoIndividuo, TAM_POP);          //soma dos pesos de cada individuo
+  array1d(excessoIndividuo, TAM_POP);       //excesso de cada individuo
+  array1d(benefIndividuo, TAM_POP);         //beneficio de cada individuo
+  array1d(penalidadeIndividuo, TAM_POP);    //penalidade de cada individuo por exceder.
+  array1d(melhorIndividuo, TAM_IND);        //melhor individuo
+  array2d(torneio, TAM_POP, TAM_TORNEIO);   //matriz das competicoes
 
   /* Construir o Problema */
   gerarPesos(pesos, TAM_IND);
@@ -163,9 +180,6 @@ void gerarBeneficio(int b[], int qtde) {
 * @param qtde - quantidade de objetos
 */
 void imprimirPesos(int p[], int qtde) {
-  FILE *arquivo;
-  arquivo  = fopen("info.dat","wb");
-
   fprintf(arquivo, "Pesos: ");
   for(i = 0; i < qtde; i++) {
     fprintf(arquivo, " %d ", p[i]);
@@ -261,6 +275,7 @@ void calcularExcessoIndividuo(int pesoIndividuo[], int excessoIndividuo[], int c
 * @param excessoIndividuo - vetor contendo o valor de excesso de cada individuo
 */
 void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int b[], int penalidadeIndividuo[], int excessoIndividuo[]) {
+
   int aux = 0;
   for(i = 0; i < TAM_POP; i++) {
     for(j = 0; j < TAM_IND; j++)
@@ -296,6 +311,7 @@ void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int exces
 * @param penalidadeIndividuo - vetor a ser preenchido com as penalidades
 */
 void calcularPenalidade(int populacao[][TAM_IND], int penalidade, int penalidadeIndividuo[]) {
+
   int aux = 0;
 
   for(i = 0; i<TAM_POP; i++) {
@@ -385,6 +401,7 @@ void competir(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo
 * Combina os individuos da população
 */
 void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo[], int excessoIndividuo[], int pesos[], int capacidade, int penalidade, int penalidadeIndividuo[], int beneficios[]) {
+
   int indiceMaiorBenef = 0, indiceMenorBenef = 0, indiceSegundoMaiorBenef = 0;
   int maiorBenef = benefIndividuo[0], menorBenef = benefIndividuo[0], segundoMaiorBenef = benefIndividuo[0];
   int mutacao;
@@ -417,11 +434,11 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     fprintf(arquivo, "Indice Menor Benef: %d\n", indiceMenorBenef);
 
 
-    mutacao = rand() % 101;
+    mutacao = rand() % 50;
 
     if(ehPar(TAM_IND)) {
       for(j = 0; j < TAM_IND / 2; j++)
-        if (mutacao > 99) {
+        if (mutacao > 45) {
           if (populacao[indiceMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -430,7 +447,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
         else
           populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = TAM_IND / 2; j < TAM_IND; j++)
-        if (mutacao > 99) {
+        if (mutacao > 45) {
           if (populacao[indiceSegundoMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -441,7 +458,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     }
     else {
       for(j = 0; j < (TAM_IND+1) / 2; j++)
-        if (mutacao > 99) {
+        if (mutacao > 45) {
           if (populacao[indiceMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else
@@ -450,7 +467,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
         else
           populacao[indiceMenorBenef][j] = populacao[indiceMaiorBenef][j];
       for(j = (TAM_IND+1)/2; j < TAM_IND; j++)
-        if (mutacao > 99) {
+        if (mutacao > 45) {
           if (populacao[indiceSegundoMaiorBenef][j] == 0)
             populacao[indiceMenorBenef][j] = 1;
           else

@@ -8,7 +8,7 @@
 *                     ./<output_file>                   //Executa
 */
 #include <omp.h>
-#include "alocacao_complex.c"
+#include "alocacao.c"
 #include <time.h>
 
 // ------------------ OpenMP ------------------
@@ -23,8 +23,30 @@
 #define CAPACIDADE 0.8f                     //capacidade em relacao ao peso total.
 
 int i, j, k;                                //contador usado nos loops
+FILE *arquivo;
+
+/* Funcoes */
+void popular();
+void calcularPesoIndividuo();
+void calcularExcessoIndividuo();
+void calcularPenalidade();
+void calcularBenefIndividuo();
+void imprimirDadosIndividuo();
+void gerarPesos();
+void gerarBeneficio();
+void imprimirPop();
+void imprimirPesos();
+void imprimirBeneficios();
+void imprimirMelhorIndividuo();
+void verificarMelhorIndividuo();
+void competir();
+void crossOver();
+int calcularCapacidade();
+int calcularPesoTotal();
 
 int main() {
+
+  arquivo  = fopen("info.dat","w");
 
   /* Declaracao das variaveis */
   array2d(pop, TAM_POP, TAM_IND);           //populacao de individuos
@@ -62,7 +84,7 @@ int main() {
     gerarBeneficio(beneficios, TAM_IND);
     /* Construir o Problema */
     capacidade = calcularCapacidade(pesos, TAM_IND);
-    printf("\n");
+    fprintf(arquivo, "\n");
     srand((unsigned)time(NULL));
     popular(pop);
 
@@ -77,9 +99,9 @@ int main() {
     /* Torneio (Selecao dos melhores individuos) */
     srand((unsigned)time(NULL));
     competir(pop, popIntermed, benefIndividuo, torneio);
-    printf("População Intermediaria - Torneio\n");
+    fprintf(arquivo, "População Intermediaria - Torneio\n");
     imprimirPop(popIntermed);
-    printf("\n");
+    fprintf(arquivo, "\n");
 
     /* Medir qualidade dos individuos selecionados */
     calcularPesoIndividuo(popIntermed, pesoIndividuo, pesos);
@@ -89,25 +111,23 @@ int main() {
     imprimirDadosIndividuo(pesoIndividuo, benefIndividuo, excessoIndividuo);
 
     /* Cruzamento */
-    printf("\n---- Inicio Cruzamento ---\n");
+    fprintf(arquivo, "\n---- Inicio Cruzamento ---\n");
   }
-
 
   crossOver(popIntermed, benefIndividuo, pesoIndividuo, excessoIndividuo, pesos, capacidade, PENALIDADE, penalidadeIndividuo, beneficios);
 
-  /******************************************** PARTE 4 ********************************************/
-  /*Impressão da parte real e da parte imaginária da matriz C*/
-  printf("************%d\n ",CPU);
-
   if (CPU == 0) {
-    printf("\n");
+    fprintf(arquivo, "\n");
     /* Medir Qualidade apos o cruzamento */
     verificarMelhorIndividuo(popIntermed, benefIndividuo, melhorIndividuo);
     imprimirMelhorIndividuo(melhorIndividuo);
-    printf("\n");
+    fprintf(arquivo, "\n");
   }
+
+  fclose(arquivo);
+
   /*Feedback para finalização da CPU*/
-  printf("\nConcluido! CPU=%d ok!\n", CPU);
+  fprintf(arquivo, "\nConcluido! CPU=%d ok!\n", CPU);
 
   return 0;
 }
@@ -124,7 +144,9 @@ void popular(int populacao[][TAM_IND]) {
   int auxZero = 0;
   int auxUm = 0;
 
+  #pragma omp parallel for
   for (i = 0; i < TAM_POP; i++) {
+    #pragma omp parallel for
     for (j = 0; j < TAM_IND; j++) {
       populacao[i][j] = rand() % 2;
       if (populacao[i][j] == 0) // Conta o numero de 0s e 1s do individuo
@@ -139,9 +161,9 @@ void popular(int populacao[][TAM_IND]) {
     auxUm = 0;
   }
 
-  printf("Solucao inicial aleatoria:\n");
+  fprintf(arquivo, "Solucao inicial aleatoria:\n");
   imprimirPop(populacao);
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -150,11 +172,11 @@ void popular(int populacao[][TAM_IND]) {
 */
 void imprimirPop(int vet[][TAM_IND]) {
   for (i = 0 ; i < TAM_POP; i++) {
-    printf("Individuo%d: ", i);
+    fprintf(arquivo, "Individuo%d: ", i);
     for(j = 0; j < TAM_IND; j++) {
-      printf(" %d ", vet[i][j]);
+      fprintf(arquivo, " %d ", vet[i][j]);
     }
-    printf("\n");
+    fprintf(arquivo, "\n");
   }
 }
 
@@ -189,11 +211,11 @@ void gerarBeneficio(int b[], int qtde) {
 * @param qtde - quantidade de objetos
 */
 void imprimirPesos(int p[], int qtde) {
-  printf("Pesos: ");
+  fprintf(arquivo, "Pesos: ");
   for(i = 0; i < qtde; i++) {
-    printf(" %d ", p[i]);
+    fprintf(arquivo, " %d ", p[i]);
   }
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -202,11 +224,11 @@ void imprimirPesos(int p[], int qtde) {
 * @param qtde - quantidade de objetos
 */
 void imprimirBeneficios(int b[], int qtde) {
-  printf("Valores: ");
+  fprintf(arquivo, "Valores: ");
   for(i = 0; i < qtde; i++) {
-    printf(" %d ", b[i]);
+    fprintf(arquivo, " %d ", b[i]);
   }
-  printf("\n");
+  fprintf(arquivo, "\n");
 }
 
 /*
@@ -219,7 +241,7 @@ void imprimirBeneficios(int b[], int qtde) {
 int calcularCapacidade(int p[], int qtde) {
   int peso = calcularPesoTotal();
   int c = peso * CAPACIDADE;
-  printf("Capacidade da mochila: %d\n", c);
+  fprintf(arquivo, "Capacidade da mochila: %d\n", c);
 
   return c;
 }
@@ -302,13 +324,13 @@ void calcularBenefIndividuo(int populacao[][TAM_IND], int benefIndividuo[], int 
 * @param excessoIndividuo - vetor com o excesso de cada individuo
 */
 void imprimirDadosIndividuo(int pesoIndividuo[], int benefIndividuo[], int excessoIndividuo[]) {
-  printf("Dados de Cada Individuo: \n");
+  fprintf(arquivo, "Dados de Cada Individuo: \n");
   for(i = 0; i < TAM_POP; i++) {
-    printf("Individuo%d: ", i);
-    printf("Peso: %d \t", pesoIndividuo[i]);
-    printf("Excesso: %d \t", excessoIndividuo[i]);
-    printf("Fitness: %d ", benefIndividuo[i]);
-    printf("\n");
+    fprintf(arquivo, "Individuo%d: ", i);
+    fprintf(arquivo, "Peso: %d \t", pesoIndividuo[i]);
+    fprintf(arquivo, "Excesso: %d \t", excessoIndividuo[i]);
+    fprintf(arquivo, "Fitness: %d ", benefIndividuo[i]);
+    fprintf(arquivo, "\n");
   }
 }
 
@@ -358,9 +380,9 @@ void verificarMelhorIndividuo(int populacao[][TAM_IND], int benefIndividuo[], in
 * @param melhorIndividuo - vetor contendo o melhor indiviudo
 */
 void imprimirMelhorIndividuo(int melhorIndividuo[]) {
-  printf("\nMelhor Individuo: \n");
+  fprintf(arquivo, "\nMelhor Individuo: \n");
   for(i = 0; i < TAM_IND; i++)
-    printf("%d ", melhorIndividuo[i]);
+    fprintf(arquivo, "%d ", melhorIndividuo[i]);
 }
 
 
@@ -385,20 +407,22 @@ void competir(int pop[][TAM_IND], int popIntermed[][TAM_IND], int benefIndividuo
 
   int maior = 0;
 
-  printf("\n\nTorneio: \n");
+  fprintf(arquivo, "\n\nTorneio: \n");
+  #pragma omp parallel for
   for(i = 0; i < TAM_POP; i++) {
+    #pragma omp parallel for
     for(j = 0; j < TAM_TORNEIO; j++) {
       torneio[i][j] = rand() % TAM_POP; // Preencher a matriz de torneio com individuos
-      printf(" %d ", torneio[i][j]);
+      fprintf(arquivo, " %d ", torneio[i][j]);
       if (benefIndividuo[torneio[i][j]] > benefIndividuo[maior]) // Analisa qual individuo tem a > fitness
         maior = torneio[i][j];
     }
-    printf("\n");
+    fprintf(arquivo, "\n");
     aux[i] = maior;
     maior = 0;
   }
 
-  printf("\n");
+  fprintf(arquivo, "\n");
 
   //Preencher populacaoIntermediaria
   for(i = 0; i < TAM_POP; i++)
@@ -414,9 +438,10 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
   int indiceMaiorBenef = 0, indiceMenorBenef = 0, indiceSegundoMaiorBenef = 0;
   int maiorBenef = benefIndividuo[0], menorBenef = benefIndividuo[0], segundoMaiorBenef = benefIndividuo[0];
   int mutacao;
-  #pragma omp parallel for
+
+  // #pragma omp parallel for
   for(k = 0; k < GERACOES; k++) {
-    printf("\n---- GERACAO: %d -----\n", k);
+    fprintf(arquivo, "\n---- GERACAO: %d -----\n", k);
     #pragma omp parallel for
     for(j = 1; j < TAM_POP; j++) {
       if (benefIndividuo[j] > maiorBenef) {
@@ -428,6 +453,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
         indiceMenorBenef = j;
       }
     }
+    #pragma omp parallel for
     for (j = 1; j < TAM_POP; j++) {
       if (benefIndividuo[j] > segundoMaiorBenef && j != indiceMaiorBenef) {
         segundoMaiorBenef = benefIndividuo[j];
@@ -435,12 +461,12 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
       }
     }
 
-    printf("Maior Beneficio: %d\n", maiorBenef);
-    printf("Indice Maior Benef: %d\n", indiceMaiorBenef);
-    printf("Segundo Maior Beneficio: %d\n", segundoMaiorBenef);
-    printf("Indice Segundo Maior Benef: %d\n", indiceSegundoMaiorBenef);
-    printf("Menor Beneficio: %d\n", menorBenef);
-    printf("Indice Menor Benef: %d\n", indiceMenorBenef);
+    fprintf(arquivo, "Maior Beneficio: %d\n", maiorBenef);
+    fprintf(arquivo, "Indice Maior Benef: %d\n", indiceMaiorBenef);
+    fprintf(arquivo, "Segundo Maior Beneficio: %d\n", segundoMaiorBenef);
+    fprintf(arquivo, "Indice Segundo Maior Benef: %d\n", indiceSegundoMaiorBenef);
+    fprintf(arquivo, "Menor Beneficio: %d\n", menorBenef);
+    fprintf(arquivo, "Indice Menor Benef: %d\n", indiceMenorBenef);
 
 
     mutacao = rand() % 50;
@@ -490,13 +516,13 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
           populacao[indiceMenorBenef][j] = populacao[indiceSegundoMaiorBenef][j];
     }
 
-    #pragma omp parallel for
-    for (i = 0; i < TAM_POP; i++){
-      #pragma omp parallel for
+    // #pragma omp parallel for
+    for (i = 0; i < TAM_POP; i++) {
+      // #pragma omp parallel for
       for(j = 0; j < TAM_IND; j++) {
-        printf(" %d ", populacao[i][j]);
+        fprintf(arquivo, " %d ", populacao[i][j]);
       }
-      printf("\n");
+      fprintf(arquivo, "\n");
     }
 
     maiorBenef = benefIndividuo[0];
@@ -506,7 +532,7 @@ void crossOver(int populacao[][TAM_IND], int benefIndividuo[], int pesoIndividuo
     indiceMenorBenef = 0;
     indiceSegundoMaiorBenef = 0;
 
-    printf("\n");
+    fprintf(arquivo, "\n");
     calcularPesoIndividuo(populacao, pesoIndividuo, pesos);
     calcularExcessoIndividuo(pesoIndividuo, excessoIndividuo, capacidade);
     calcularPenalidade(populacao, PENALIDADE, penalidadeIndividuo);

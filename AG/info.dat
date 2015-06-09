@@ -1,420 +1,420 @@
-Pesos:  19  2  27  0  0  5  35  4 
- 4 
-Capacidade da mochila: 41
+Pesos:  9  25  46  24  21  21  8  23 
+Valores:  59  25  46  74  21  21  8  23 
+Capacidade da mochila: 106
 
 Solucao inicial aleatoria:
-Individuo0:  1  0  1  0  0  1  1  0 
-Individuo1:  1  0  1  0  1  1  1  0 
-Individuo2:  0  1  1  1  0  1  1  1 
-Individuo3:  0  0  1  0  0  1  0  1 
-Individuo4:  1  1  1  1  0  0  1  0 
-Individuo5:  1  1  0  0  0  1  0  0 
-Individuo6:  0  0  1  1  1  0  0  0 
-Individuo7:  0  1  0  1  0  0  0  1 
-Individuo8:  0  0  1  0  0  0  0  1 
-Individuo9:  1  0  1  1  0  0  0  0 
-Individuo10:  0  1  1  1  0  0  1  0 
-Individuo11:  1  0  1  0  0  0  1  0 
-Individuo12:  0  0  1  0  1  1  0  0 
-Individuo13:  0  1  0  0  1  0  0  1 
-Individuo14:  1  0  1  1  0  0  0  1 
-Individuo15:  0  1  1  1  1  1  1  1 
-Individuo16:  1  0  0  0  0  0  1  0 
-Individuo17:  1  1  0  1  1  0  0  0 
-Individuo18:  0  1  0  0  0  0  0  0 
-Individuo19:  1  1  1  1  0  1  0  0 
+Individuo0:  1  1  0  0  1  1  0  1 
+Individuo1:  0  0  0  0  1  1  1  1 
+Individuo2:  0  0  0  1  1  1  1  1 
+Individuo3:  0  1  1  0  0  1  0  1 
+Individuo4:  1  0  1  0  1  1  1  1 
+Individuo5:  1  0  1  1  1  0  0  0 
+Individuo6:  1  0  1  0  0  0  1  0 
+Individuo7:  1  0  1  1  0  1  0  1 
+Individuo8:  1  1  1  0  0  0  1  0 
+Individuo9:  0  1  1  0  1  1  0  0 
+Individuo10:  1  1  0  1  0  0  0  1 
+Individuo11:  0  1  1  0  0  1  1  1 
+Individuo12:  1  0  1  1  1  0  1  1 
+Individuo13:  1  0  1  1  1  1  1  1 
+Individuo14:  1  0  0  1  0  0  0  0 
+Individuo15:  1  1  1  1  1  0  0  0 
+Individuo16:  1  1  1  0  0  1  1  1 
+Individuo17:  1  1  0  1  0  0  0  1 
+Individuo18:  0  0  0  0  1  1  0  0 
+Individuo19:  0  1  0  1  0  0  1  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -2014 
-Individuo2: Peso: 73 	Excesso: 32 	Fitness: -2081 
-Individuo3: Peso: 36 	Excesso: 0 	Fitness: 136 
-Individuo4: Peso: 83 	Excesso: 42 	Fitness: -1867 
-Individuo5: Peso: 26 	Excesso: 0 	Fitness: 176 
-Individuo6: Peso: 27 	Excesso: 0 	Fitness: 77 
-Individuo7: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo8: Peso: 31 	Excesso: 0 	Fitness: 81 
-Individuo9: Peso: 46 	Excesso: 5 	Fitness: 56 
-Individuo10: Peso: 64 	Excesso: 23 	Fitness: -572 
-Individuo11: Peso: 81 	Excesso: 40 	Fitness: -539 
-Individuo12: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo13: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo14: Peso: 50 	Excesso: 9 	Fitness: -138 
-Individuo15: Peso: 73 	Excesso: 32 	Fitness: -2913 
-Individuo16: Peso: 54 	Excesso: 13 	Fitness: 0 
-Individuo17: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo18: Peso: 2 	Excesso: 0 	Fitness: 52 
-Individuo19: Peso: 53 	Excesso: 12 	Fitness: -347 
+Individuo0: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo1: Peso: 73 	Excesso: 0 	Fitness: 73 
+Individuo2: Peso: 97 	Excesso: 0 	Fitness: 147 
+Individuo3: Peso: 115 	Excesso: 9 	Fitness: -173 
+Individuo4: Peso: 128 	Excesso: 22 	Fitness: -1406 
+Individuo5: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo6: Peso: 63 	Excesso: 0 	Fitness: 113 
+Individuo7: Peso: 123 	Excesso: 17 	Fitness: -627 
+Individuo8: Peso: 88 	Excesso: 0 	Fitness: 138 
+Individuo9: Peso: 113 	Excesso: 7 	Fitness: -111 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo11: Peso: 123 	Excesso: 17 	Fitness: -727 
+Individuo12: Peso: 131 	Excesso: 25 	Fitness: -1569 
+Individuo13: Peso: 152 	Excesso: 46 	Fitness: -4256 
+Individuo14: Peso: 33 	Excesso: 0 	Fitness: 133 
+Individuo15: Peso: 125 	Excesso: 19 	Fitness: -725 
+Individuo16: Peso: 132 	Excesso: 26 	Fitness: -1690 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo18: Peso: 42 	Excesso: 0 	Fitness: 42 
+Individuo19: Peso: 80 	Excesso: 0 	Fitness: 130 
 
 
 Torneio: 
- 9  12  17 
- 0  0  15 
- 15  4  13 
- 6  11  6 
- 3  1  17 
- 8  10  15 
- 15  3  16 
- 1  13  3 
- 0  6  9 
- 18  2  3 
- 4  3  7 
- 13  3  19 
- 8  18  3 
- 14  17  7 
- 12  12  0 
+ 19  5  6 
+ 14  1  1 
+ 8  3  14 
+ 10  12  8 
+ 11  9  13 
  9  12  2 
- 16  8  5 
- 5  1  18 
- 8  2  16 
- 17  12  11 
+ 18  17  7 
+ 1  1  11 
+ 8  13  3 
+ 16  14  9 
+ 16  13  7 
+ 14  19  8 
+ 15  7  11 
+ 1  17  16 
+ 9  1  5 
+ 2  10  10 
+ 17  8  19 
+ 4  2  12 
+ 7  10  5 
+ 10  7  19 
 
 População Intermediaria - Torneio
-Individuo0:  0  0  1  0  1  1  0  0 
-Individuo1:  1  0  1  0  0  6  9  0 
-Individuo2:  0  1  0  0  1  0  0  1 
-Individuo3:  0  0  1  1  12  12  0  0 
-Individuo4:  0  0  1  0  13  3  19  1 
-Individuo5:  0  0  1  0  16  8  5  1 
-Individuo6:  0  0  1  0  13  3  19  1 
-Individuo7:  0  0  1  0  13  3  19  1 
-Individuo8:  0  0  1  1  12  12  0  0 
-Individuo9:  0  0  1  0  13  3  19  1 
-Individuo10:  0  0  1  0  13  3  19  1 
-Individuo11:  0  0  1  0  13  3  19  1 
-Individuo12:  0  0  1  0  13  3  19  1 
-Individuo13:  1  1  0  1  1  0  0  0 
-Individuo14:  0  0  1  0  1  1  0  0 
-Individuo15:  0  0  1  0  1  1  0  0 
-Individuo16:  1  1  0  0  14  17  7  0 
-Individuo17:  1  1  0  0  14  17  7  0 
-Individuo18:  0  0  1  0  16  8  5  1 
-Individuo19:  0  0  1  0  1  1  0  0 
+Individuo0:  1  0  1  1  1  0  0  0 
+Individuo1:  1  1  0  0  1  1  0  1 
+Individuo2:  1  1  0  0  1  1  0  1 
+Individuo3:  1  1  0  1  0  0  0  1 
+Individuo4:  1  1  0  0  1  1  0  1 
+Individuo5:  1  1  0  0  1  1  0  1 
+Individuo6:  1  1  0  1  0  0  0  1 
+Individuo7:  1  1  0  0  1  1  0  1 
+Individuo8:  1  1  0  0  1  1  0  1 
+Individuo9:  1  1  0  0  1  1  0  1 
+Individuo10:  1  1  0  0  1  1  0  1 
+Individuo11:  1  1  0  0  1  1  0  1 
+Individuo12:  1  1  0  0  1  1  0  1 
+Individuo13:  1  1  0  1  0  0  0  1 
+Individuo14:  1  0  1  1  1  0  0  0 
+Individuo15:  1  1  0  1  0  0  0  1 
+Individuo16:  1  1  0  1  0  0  0  1 
+Individuo17:  1  1  0  0  1  1  0  1 
+Individuo18:  1  0  1  1  1  0  0  0 
+Individuo19:  1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo5: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo6: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo7: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo2: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo5: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- Inicio Cruzamento ---
 
 ---- GERACAO: 0 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 4
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 1
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo6: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo7: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo5: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- GERACAO: 1 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 5
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 2
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo6: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo7: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo5: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- GERACAO: 2 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 6
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 4
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo6: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo7: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo5: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- GERACAO: 3 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 7
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 5
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo6: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo7: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo5: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- GERACAO: 4 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 9
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 7
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo6: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo7: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo10: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo5: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo8: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 ---- GERACAO: 5 -----
-Maior Beneficio: 132
+Maior Beneficio: 200
 Indice Maior Benef: 0
-Segundo Maior Beneficio: 132
+Segundo Maior Beneficio: 200
 Indice Segundo Maior Benef: 0
-Menor Beneficio: -1329
-Indice Menor Benef: 10
- 0  0  1  0  1  1  0  0 
- 1  0  1  0  0  6  9  0 
- 0  1  0  0  1  0  0  1 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  1  12  12  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  13  3  19  1 
- 0  0  1  0  13  3  19  1 
- 1  1  0  1  1  0  0  0 
- 0  0  1  0  1  1  0  0 
- 0  0  1  0  1  1  0  0 
- 1  1  0  0  14  17  7  0 
- 1  1  0  0  14  17  7  0 
- 0  0  1  0  16  8  5  1 
- 0  0  1  0  1  1  0  0 
+Menor Beneficio: 149
+Indice Menor Benef: 8
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  1  0  0  0  1 
+ 1  1  0  0  1  1  0  1 
+ 1  0  1  1  1  0  0  0 
+ 1  1  0  1  0  0  0  1 
 
 Dados de Cada Individuo: 
-Individuo0: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo1: Peso: 86 	Excesso: 45 	Fitness: -1204 
-Individuo2: Peso: 6 	Excesso: 0 	Fitness: 56 
-Individuo3: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo4: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo5: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo6: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo7: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo8: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo9: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo10: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo11: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo12: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo13: Peso: 21 	Excesso: 0 	Fitness: 121 
-Individuo14: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo15: Peso: 32 	Excesso: 0 	Fitness: 132 
-Individuo16: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo17: Peso: 61 	Excesso: 20 	Fitness: -789 
-Individuo18: Peso: 71 	Excesso: 30 	Fitness: -1329 
-Individuo19: Peso: 32 	Excesso: 0 	Fitness: 132 
+Individuo0: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo1: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo2: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo4: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo5: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo6: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo7: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo8: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo9: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo10: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo11: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo12: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo14: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo15: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo16: Peso: 81 	Excesso: 0 	Fitness: 181 
+Individuo17: Peso: 99 	Excesso: 0 	Fitness: 149 
+Individuo18: Peso: 100 	Excesso: 0 	Fitness: 200 
+Individuo19: Peso: 81 	Excesso: 0 	Fitness: 181 
 
 
 Melhor Individuo: 
-0 0 1 0 1 1 0 0 
+1 0 1 1 1 0 0 0 

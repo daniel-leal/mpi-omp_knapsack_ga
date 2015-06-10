@@ -1,0 +1,1370 @@
+Pesos:  30  17  23  16  13  37  33  8  31  25  12  17 
+Valores:  110  57  143  96  133  117  73  168  191  185  172  137 
+Capacidade da mochila: 157
+
+Solucao inicial aleatoria:
+Individuo0:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo1:  1  0  1  1  0  1  0  0  0  0  0  0 
+Individuo2:  1  1  0  1  0  0  0  0  0  0  0  0 
+Individuo3:  1  1  1  0  0  0  0  0  0  0  0  0 
+Individuo4:  1  1  1  0  1  0  0  0  0  0  0  0 
+Individuo5:  1  1  1  0  1  1  0  0  0  0  0  0 
+Individuo6:  1  1  1  0  0  1  0  0  0  0  0  0 
+Individuo7:  1  1  0  1  0  1  0  0  0  0  0  0 
+Individuo8:  1  1  0  0  0  0  0  0  0  0  0  0 
+Individuo9:  1  1  0  0  1  1  0  0  0  0  0  0 
+Individuo10:  1  0  0  0  0  1  0  0  0  0  0  0 
+Individuo11:  1  1  0  0  1  0  0  0  0  0  0  0 
+Individuo12:  0  0  0  0  1  0  0  0  0  0  0  0 
+Individuo13:  1  1  0  0  1  0  0  0  0  0  0  0 
+Individuo14:  0  0  1  0  1  0  0  0  0  0  0  0 
+Individuo15:  1  0  0  1  0  0  0  0  0  0  0  0 
+Individuo16:  1  0  1  1  0  0  0  0  0  0  0  0 
+Individuo17:  0  0  0  0  1  1  0  0  0  0  0  0 
+Individuo18:  0  0  0  0  0  0  0  0  0  0  0  0 
+Individuo19:  0  1  0  1  1  1  0  0  0  0  0  0 
+Individuo20:  1  1  1  1  0  0  0  0  0  0  0  0 
+Individuo21:  1  1  0  0  1  0  0  0  0  0  0  0 
+Individuo22:  0  1  1  0  1  0  0  0  0  0  0  0 
+Individuo23:  0  1  0  0  0  1  0  0  0  0  0  0 
+Individuo24:  0  0  0  1  0  1  0  0  0  0  0  0 
+Individuo25:  0  0  0  0  0  0  0  0  0  0  0  0 
+Individuo26:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo27:  0  0  0  0  0  0  0  0  0  0  0  0 
+Individuo28:  0  0  0  0  0  0  0  0  0  1  1  0 
+Individuo29:  0  0  0  0  0  0  0  0  0  0  0  0 
+Individuo30:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo31:  0  0  0  0  0  0  0  0  1  0  0  1 
+Individuo32:  0  0  0  0  0  0  0  0  1  0  1  0 
+Individuo33:  0  0  0  0  0  0  0  0  0  1  0  0 
+Individuo34:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo35:  0  0  0  0  0  0  0  0  0  0  0  1 
+Individuo36:  0  0  0  0  0  0  0  0  0  1  1  1 
+Individuo37:  0  0  0  0  0  0  0  0  0  0  0  1 
+Individuo38:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo39:  0  0  0  0  0  0  0  1  0  0  0  0 
+Individuo40:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo41:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo42:  0  0  0  0  0  0  0  0  1  1  1  1 
+Individuo43:  0  0  0  0  0  0  0  1  0  1  1  1 
+Individuo44:  0  0  0  0  0  0  0  0  1  0  1  1 
+Individuo45:  0  0  0  0  0  0  0  1  0  0  0  1 
+Individuo46:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo47:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo48:  0  0  0  0  0  0  0  1  1  0  1  1 
+Individuo49:  0  0  0  0  0  0  0  1  0  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo1: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo2: Peso: 63 	Excesso: 0 	Fitness: 263 
+Individuo3: Peso: 70 	Excesso: 0 	Fitness: 310 
+Individuo4: Peso: 83 	Excesso: 0 	Fitness: 443 
+Individuo5: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo6: Peso: 107 	Excesso: 0 	Fitness: 427 
+Individuo7: Peso: 100 	Excesso: 0 	Fitness: 380 
+Individuo8: Peso: 47 	Excesso: 0 	Fitness: 167 
+Individuo9: Peso: 97 	Excesso: 0 	Fitness: 417 
+Individuo10: Peso: 67 	Excesso: 0 	Fitness: 227 
+Individuo11: Peso: 60 	Excesso: 0 	Fitness: 300 
+Individuo12: Peso: 13 	Excesso: 0 	Fitness: 133 
+Individuo13: Peso: 60 	Excesso: 0 	Fitness: 300 
+Individuo14: Peso: 36 	Excesso: 0 	Fitness: 276 
+Individuo15: Peso: 46 	Excesso: 0 	Fitness: 206 
+Individuo16: Peso: 69 	Excesso: 0 	Fitness: 349 
+Individuo17: Peso: 50 	Excesso: 0 	Fitness: 250 
+Individuo18: Peso: 0 	Excesso: 0 	Fitness: 0 
+Individuo19: Peso: 83 	Excesso: 0 	Fitness: 403 
+Individuo20: Peso: 86 	Excesso: 0 	Fitness: 406 
+Individuo21: Peso: 60 	Excesso: 0 	Fitness: 300 
+Individuo22: Peso: 53 	Excesso: 0 	Fitness: 333 
+Individuo23: Peso: 54 	Excesso: 0 	Fitness: 174 
+Individuo24: Peso: 53 	Excesso: 0 	Fitness: 213 
+Individuo25: Peso: 0 	Excesso: 0 	Fitness: 0 
+Individuo26: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo27: Peso: 0 	Excesso: 0 	Fitness: 0 
+Individuo28: Peso: 37 	Excesso: 0 	Fitness: 357 
+Individuo29: Peso: 0 	Excesso: 0 	Fitness: 0 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 48 	Excesso: 0 	Fitness: 328 
+Individuo32: Peso: 43 	Excesso: 0 	Fitness: 363 
+Individuo33: Peso: 25 	Excesso: 0 	Fitness: 185 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 17 	Excesso: 0 	Fitness: 137 
+Individuo36: Peso: 54 	Excesso: 0 	Fitness: 494 
+Individuo37: Peso: 17 	Excesso: 0 	Fitness: 137 
+Individuo38: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo39: Peso: 8 	Excesso: 0 	Fitness: 168 
+Individuo40: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo41: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo42: Peso: 85 	Excesso: 0 	Fitness: 685 
+Individuo43: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo44: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo45: Peso: 25 	Excesso: 0 	Fitness: 305 
+Individuo46: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo47: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo48: Peso: 68 	Excesso: 0 	Fitness: 668 
+Individuo49: Peso: 45 	Excesso: 0 	Fitness: 525 
+
+
+Torneio: 
+ 10  7  43 
+ 46  33  17 
+ 23  18  41 
+ 35  22  37 
+ 13  5  38 
+ 33  14  10 
+ 45  19  47 
+ 38  40  32 
+ 31  23  17 
+ 22  11  0 
+ 13  21  7 
+ 6  17  43 
+ 23  41  11 
+ 14  26  33 
+ 3  41  40 
+ 43  24  5 
+ 5  21  24 
+ 2  12  16 
+ 35  43  40 
+ 4  15  1 
+ 5  30  24 
+ 14  36  41 
+ 7  9  34 
+ 20  25  12 
+ 4  30  4 
+ 46  23  30 
+ 1  29  4 
+ 28  33  16 
+ 44  18  11 
+ 34  23  26 
+ 37  30  6 
+ 11  44  44 
+ 5  4  5 
+ 39  24  30 
+ 2  30  12 
+ 8  27  37 
+ 38  28  18 
+ 44  8  2 
+ 10  3  22 
+ 23  39  47 
+ 49  27  27 
+ 7  40  24 
+ 3  45  30 
+ 8  37  4 
+ 38  39  37 
+ 2  47  14 
+ 40  37  44 
+ 8  34  3 
+ 12  46  6 
+ 35  20  47 
+
+População Intermediaria - Torneio
+Individuo0:  0  0  0  0  0  0  0  1  0  1  1  1 
+Individuo1:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo2:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo3:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo4:  1  1  1  0  1  1  0  0  0  0  0  0 
+Individuo5:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo6:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo7:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo8:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo9:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo10:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo11:  0  0  0  0  0  0  0  1  0  1  1  1 
+Individuo12:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo13:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo14:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo15:  0  0  0  0  0  0  0  1  0  1  1  1 
+Individuo16:  1  1  1  0  1  1  0  0  0  0  0  0 
+Individuo17:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo18:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo19:  1  0  1  1  0  1  0  0  0  0  0  0 
+Individuo20:  1  1  1  0  1  1  0  0  0  0  0  0 
+Individuo21:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo22:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo23:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo24:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo25:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo26:  1  0  1  1  0  1  0  0  0  0  0  0 
+Individuo27:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo28:  0  0  0  0  0  0  0  0  1  0  1  1 
+Individuo29:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo30:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo31:  0  0  0  0  0  0  0  0  1  0  1  1 
+Individuo32:  1  1  1  0  1  1  0  0  0  0  0  0 
+Individuo33:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo34:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo35:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo36:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo37:  0  0  0  0  0  0  0  0  1  0  1  1 
+Individuo38:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo39:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo40:  0  0  0  0  0  0  0  1  0  1  1  0 
+Individuo41:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo42:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo43:  0  1  1  0  1  1  0  0  0  0  0  0 
+Individuo44:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo45:  0  0  0  0  0  0  0  0  1  1  1  0 
+Individuo46:  0  0  0  0  0  0  0  1  1  1  0  1 
+Individuo47:  0  0  0  0  0  0  0  1  1  0  1  0 
+Individuo48:  0  0  0  0  0  0  0  1  1  0  0  1 
+Individuo49:  0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo9: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo10: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- Inicio Cruzamento ---
+
+---- GERACAO: 0 -----
+Maior Beneficio: 681
+Indice Maior Benef: 7
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 13
+Menor Beneficio: 450
+Indice Menor Benef: 3
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo9: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo10: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 1 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 7
+Menor Beneficio: 450
+Indice Menor Benef: 5
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo9: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo10: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 2 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 8
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo10: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 3 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 9
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 4 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 10
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 5 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 17
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 6 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 23
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 7 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 27
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 8 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 35
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+---- GERACAO: 9 -----
+Maior Beneficio: 681
+Indice Maior Benef: 3
+Segundo Maior Beneficio: 681
+Indice Segundo Maior Benef: 5
+Menor Beneficio: 450
+Indice Menor Benef: 38
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  0  1  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 1  0  1  1  0  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 1  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  0  1  1 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  0  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  1  1  0  1  1  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+ 0  0  0  0  0  0  0  1  1  1  0  1 
+ 0  0  0  0  0  0  0  1  1  0  1  0 
+ 0  0  0  0  0  0  0  1  1  0  0  1 
+ 0  0  0  0  0  0  0  0  1  1  1  0 
+
+Dados de Cada Individuo: 
+Individuo0: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo1: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo2: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo3: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo4: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo5: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo6: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo7: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo8: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo9: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo10: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo11: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo12: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo13: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo14: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo15: Peso: 62 	Excesso: 0 	Fitness: 662 
+Individuo16: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo17: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo18: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo19: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo20: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo21: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo22: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo23: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo24: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo25: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo26: Peso: 106 	Excesso: 0 	Fitness: 466 
+Individuo27: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo28: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo29: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo30: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo31: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo32: Peso: 120 	Excesso: 0 	Fitness: 560 
+Individuo33: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo34: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo35: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo36: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo37: Peso: 60 	Excesso: 0 	Fitness: 500 
+Individuo38: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo39: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo40: Peso: 45 	Excesso: 0 	Fitness: 525 
+Individuo41: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo42: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo43: Peso: 90 	Excesso: 0 	Fitness: 450 
+Individuo44: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo45: Peso: 68 	Excesso: 0 	Fitness: 548 
+Individuo46: Peso: 81 	Excesso: 0 	Fitness: 681 
+Individuo47: Peso: 51 	Excesso: 0 	Fitness: 531 
+Individuo48: Peso: 56 	Excesso: 0 	Fitness: 496 
+Individuo49: Peso: 68 	Excesso: 0 	Fitness: 548 
+
+
+Melhor Individuo: 
+0 0 0 0 0 0 0 1 1 1 0 1 

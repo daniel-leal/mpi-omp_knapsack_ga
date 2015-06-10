@@ -11,14 +11,14 @@
 #include "alocacao.c"
 #include <time.h>
 
-#define TAM_POP 20                           //tamanho da população (Quantidade de Individuos)
-#define TAM_IND 5                            //quantidade de Objetos
-#define TAM_TORNEIO 3                         //quantidade de competicoes
-#define GERACOES 2                           //numero de Iteracoes
-#define PENALIDADE 2                          //penalidade por exceder
-#define CAPACIDADE 0.6f                       //capacidade em relacao ao peso total.
+#define TAM_POP 50                           //tamanho da população (Quantidade de Individuos)
+#define TAM_IND 12                           //quantidade de Objetos
+#define TAM_TORNEIO 3                        //quantidade de competicoes
+#define GERACOES 10                          //numero de Iteracoes
+#define PENALIDADE 2                         //penalidade por exceder
+#define CAPACIDADE 0.6f                      //capacidade em relacao ao peso total.
 
-int i, j, k;                                  //contador usado nos loops
+int i, j, k;                                 //contador usado nos loops
 
 
 int main() {

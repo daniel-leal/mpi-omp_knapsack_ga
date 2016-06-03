@@ -8,9 +8,7 @@ Algoritmo Paralelo e Distribuido de um AG para a solução do problema da mochil
 > $ ./ag
 
 #### Execução do AG com OpenMP
-> $ gcc ag.c -o ag -O -w
-
-> $ export OMP_NUM_THREADS=<No Threads>
+> $ gcc ag.c -o ag -O -w -fopenmp
 
 > $ ./ag
 
@@ -19,4 +17,7 @@ Algoritmo Paralelo e Distribuido de um AG para a solução do problema da mochil
 
 > $ lamboot -v maquinas
 
-> $ mpirun C ag
+> $ mpirun -np N ./ag
+
+#### Legenda:
+N = Número de processadores
